@@ -1,58 +1,103 @@
-/* Only the start-page introduction expands beyond the shared reading column. */
-.md-content__inner:has(.me-home) { max-width: 48rem; }
-.me-home .me-introduction { padding-top: 0.5rem; }
+/* Only the start page opens wider: a centred introduction over a faint engraving. */
+.md-content__inner:has(.me-home) { max-width: 58rem; }
+.md-main:has(.me-home) { background-size: 100% 34rem; overflow: clip; }
+.me-home .me-introduction {
+  isolation: isolate;
+  padding: 3.4rem 0 0.6rem;
+  position: relative;
+  text-align: center;
+}
+.me-home .me-introduction::before {
+  background: url("../assets/engraving.svg") center / contain no-repeat;
+  content: "";
+  height: 43rem;
+  opacity: var(--me-watermark);
+  pointer-events: none;
+  position: absolute;
+  right: -15rem;
+  top: -6rem;
+  width: 43rem;
+  z-index: -1;
+}
 .me-home .me-introduction h1 {
-  font-size: clamp(2rem, 5vw, 2.6rem);
-  margin-bottom: 0.6rem;
+  font-size: clamp(2.4rem, 7vw, 3.6rem);
+  letter-spacing: -0.03em;
+  line-height: 1;
+  margin-bottom: 1rem;
 }
 /* The hidden permalink must not reserve a second title line on phones. */
 .me-home h1 .headerlink { display: none; }
-.me-home .me-lead { font-size: 1.15rem; line-height: 1.5; }
-.me-home .me-introduction > p { max-width: 40rem; }
+.me-home .me-lead { color: var(--md-default-fg-color); font-size: 1.3rem; line-height: 1.3; }
+.me-home .me-lead strong { font-weight: 500; }
+.me-home .me-introduction > p:not(.me-lead) {
+  color: var(--md-default-fg-color--light);
+  font-size: 0.9rem;
+  line-height: 1.65;
+  margin-inline: auto;
+  max-width: 32rem;
+}
 .me-home .me-actions > p {
   display: flex;
   align-items: center;
+  justify-content: center;
   flex-wrap: wrap;
   gap: 0.8rem 1.2rem;
-  margin: 1.2rem 0 0;
+  margin: 1.7rem 0 0;
 }
 .me-home .me-api-example,
-.me-home .me-featured {
-  border-top: 1px solid var(--me-border);
-  margin-top: 1.8rem;
-  padding-top: 1.4rem;
-}
-.me-home h2 { margin-top: 0; }
-.me-home .me-code-caption {
-  font-size: 0.75rem;
-  margin-bottom: 0.4rem;
-}
+.me-home .me-featured { margin-top: 5.6rem; }
+.me-home h2 { font-size: 1.7rem; margin-top: 0; }
+.me-home .me-code-caption { font-size: 0.65rem; margin-bottom: 0.4rem; }
 .me-home .me-code-caption + .highlight { margin-top: 0; }
 /* Keep the proposer explanation readable on narrow screens and when copied. */
 .me-home .highlight pre > code { white-space: pre-wrap; overflow-wrap: anywhere; }
-.me-home .highlight .c1 { color: var(--md-default-fg-color--light); }
 .me-home .me-result {
   background: var(--me-surface);
-  border-left: 2px solid var(--md-accent-fg-color);
-  padding: 0.65rem 0.9rem;
+  border: 1px solid var(--me-border);
+  border-radius: 0.6rem;
+  padding: 0.9rem 1.1rem;
 }
 .me-home .me-result p { margin: 0; }
-.me-home .me-result p + p { margin-top: 0.25rem; }
+.me-home .me-result p + p { margin-top: 0.3rem; }
+.me-home .me-result strong { color: var(--me-heading); font-size: 0.9rem; }
+
+/* On wide screens the loop's explanation sits beside its code, in reading order. */
+@media screen and (min-width: 60em) {
+  .me-home .me-api-example {
+    align-items: start;
+    column-gap: 2.8rem;
+    display: grid;
+    grid-template-columns: minmax(0, 3fr) minmax(0, 7fr);
+  }
+  .me-home .me-api-example > * { grid-column: 1; margin: 0 0 1rem; }
+  .me-home .me-api-example > p:first-child { grid-row: 1; margin: 0; }
+  .me-home .me-api-example > h2 { grid-row: 2; }
+  .me-home .me-api-example > h2 + p { grid-row: 3; }
+  .me-home .me-api-example > .highlight + p { grid-row: 4; }
+  .me-home .me-api-example > .me-result + p { grid-row: 5; }
+  .me-home .me-api-example > .me-code-caption { align-self: end; grid-column: 2; grid-row: 1 / 3; }
+  .me-home .me-api-example > .highlight { grid-column: 2; grid-row: 3 / 5; }
+  .me-home .me-api-example > .me-result { grid-column: 2; grid-row: 5; }
+}
+
 .me-home .grid.cards {
   grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 0.8rem;
+  gap: 1rem;
 }
 .me-home .grid.cards > ul > li {
+  background: var(--md-default-bg-color);
+  border: 1px solid var(--me-border);
+  border-radius: 0.8rem;
   display: flex;
   flex-direction: column;
-  border: 1px solid var(--me-border);
-  border-radius: var(--me-radius);
-  padding: 0.9rem;
+  padding: 1.3rem;
 }
 .me-home .grid.cards > ul > li > p { margin: 0 0 0.65rem; }
+.me-home .grid.cards > ul > li > p:first-child strong { font-size: 1rem; font-weight: 500; }
 .me-home .grid.cards > ul > li > p:last-child { margin: auto 0 0; }
 .me-home .grid.cards > ul > li:focus-within { border-color: var(--md-accent-fg-color); }
 
 @media (max-width: 44.99em) {
   .me-home .grid.cards { grid-template-columns: 1fr; }
+  .me-home .me-introduction::before { right: -24rem; }
 }

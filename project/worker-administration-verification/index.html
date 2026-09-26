@@ -1,0 +1,4374 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="A Python framework for improving solutions and the methods that produce them through independent evaluation">
+      
+      
+      
+        <link rel="canonical" href="https://sentient-xyz.github.io/meta-evolve-docs/project/worker-administration-verification/">
+      
+      
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/favicon.svg">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>Trusted-worker administration verification - Meta-Evolve</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.ec1eaa64.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Hanken+Grotesk:300,300i,400,400i,700,700i%7CIBM+Plex+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Hanken Grotesk";--md-code-font:"IBM Plex Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/_mkdocstrings.css">
+    
+      <link rel="stylesheet" href="../../stylesheets/tokens.css">
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
+      <link rel="stylesheet" href="../../stylesheets/chrome.css">
+    
+      <link rel="stylesheet" href="../../stylesheets/home.css">
+    
+      <link rel="stylesheet" href="../../stylesheets/loop.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  
+  <meta name="color-scheme" content="light dark">
+  
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,300..700;1,400..700&display=fallback">
+
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="custom" data-md-color-accent="custom">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#trusted-worker-administration-verification" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Meta-Evolve" class="md-header__button md-logo" aria-label="Meta-Evolve" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 3.5 21 19.5H3z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M12 10 15.4 16H8.6z" fill="#b8975a"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Meta-Evolve
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Trusted-worker administration verification
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme)" data-md-color-scheme="default" data-md-color-primary="custom" data-md-color-accent="custom"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m14.3 16-.7-2h-3.2l-.7 2H7.8L11 7h2l3.2 9zM20 8.69V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12zm-9.15 3.96h2.3L12 9z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="custom" data-md-color-accent="custom"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="custom" data-md-color-accent="custom"  aria-label="Switch to system preference"  type="radio" name="__palette" id="__palette_2">
+    
+      <label class="md-header__button md-icon" title="Switch to system preference" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="Share" aria-label="Share" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91s2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/sentient-xyz/meta-evolve" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+  </div>
+  <div class="md-source__repository">
+    sentient-xyz/meta-evolve
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../.." class="md-tabs__link">
+          
+  
+  
+    
+  
+  Start
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../guides/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Guides
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../examples/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Examples
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../concepts/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Concepts
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../reference/components/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Reference
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Development
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Meta-Evolve" class="md-nav__button md-logo" aria-label="Meta-Evolve" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 3.5 21 19.5H3z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M12 10 15.4 16H8.6z" fill="#b8975a"/></svg>
+
+    </a>
+    Meta-Evolve
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/sentient-xyz/meta-evolve" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+  </div>
+  <div class="md-source__repository">
+    sentient-xyz/meta-evolve
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../.." class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Start
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_1" id="__nav_1_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Start
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../start-here/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    First experiment
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../guides/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Guides
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2" id="__nav_2_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Guides
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../guides/evaluation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Define what better means
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../learn/05-use-experience/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Give the proposer feedback
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../learn/03-inspect-results/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Inspect results and failures
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../guides/limits/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Set limits and stopping conditions
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../learn/06-persist-run/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Save and reopen a run
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../learn/02-change-search/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Choose what to try next
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../guides/providers/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Use your model SDK
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_9" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_9" id="__nav_2_9_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Advanced composition
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_9">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Advanced composition
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../adding-an-artifact-domain/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Add an artifact domain
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../research/decomposition/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Compose a method
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_10" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_10" id="__nav_2_10_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Choosing and upgrading
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_10_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_10">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Choosing and upgrading
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../comparison/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    When to use Meta-Evolve
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../guides/migrate-to-0.2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Migrate to 0.2
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Examples
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Examples
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../examples/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Explore all examples
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_2" id="__nav_3_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Images, prompts, and data
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Images, prompts, and data
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../build-patterns/feedback-descent/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    SVG Feedback Descent
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../learn/llm-prompt/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Routing prompt
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../guides/live-prompt/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Live routing
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../applications/meeting-notes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Meeting notes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../learn/research-labs/sealqa-feedback-descent/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    SealQA prompt adaptation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../learn/research-labs/02-autodata/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    AutoData
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_3" id="__nav_3_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Code and systems
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Code and systems
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../learn/04-improve-source/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Source repair
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../guides/live-parser/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Live parser
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../applications/sql-migrations/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    SQL migration
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../applications/slug-inputs/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Find a slug defect
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../research/adrs/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Optimize a scheduler
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_4" id="__nav_3_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Skills and agents
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Skills and agents
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../guides/skill-composition/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Support skill
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../guides/playbook-improvement/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Support playbook
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../guides/harness-evolution/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Help assistant
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../build-patterns/evoskill/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    EvoSkill
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../research/ace/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ACE playbook
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../research/meta-harness/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Meta-Harness
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../research/meta-harness-reference/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Harness audit reference
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_5" id="__nav_3_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Procedures
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Procedures
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../guides/policy-evolution/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Policy evolution
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../learn/autoresearch/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    AutoResearch
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../learn/nested-evaluation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Nested evaluation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../research/transfer/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Compare and adapt methods
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../concepts/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Concepts
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_4" id="__nav_4_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Concepts
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../concepts/artifacts/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Artifacts and versions
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../concepts/meta-evolution/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Meta-evolution
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../concepts/evidence/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Evaluation and evidence
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../concepts/authority/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Authority and promotion
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../concepts/experience/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Feedback and experience
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../concepts/search/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Proposals and search
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../concepts/history/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Runs and history
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_9" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_9" id="__nav_4_9_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Budgets and failures
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_9">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Budgets and failures
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../concepts/budgets/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Budgets and stopping
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../concepts/failures/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Failures and measurements
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_10" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_10" id="__nav_4_10_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Deeper explanations
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_10_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_10">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Deeper explanations
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../concepts/identity/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Identity and lineage
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../concepts/domains/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Artifact domains
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../concepts/conformance/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Extension conformance
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Reference
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Reference
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reference/components/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Component composition
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reference/api/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Shipped API
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reference/api-examples/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    API examples and edge cases
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reference/example-commands/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Example commands
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reference/experience-provenance/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Experience provenance
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../programming-model/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Programming model
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_7" id="__nav_5_7_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Execution details
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_7">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Execution details
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../guides/runs-and-results/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Runs and search
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../guides/evaluation-and-budgets/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Evaluation and budgets
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../guides/experience/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Experience access
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../guides/durability/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Storage and recovery
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reference/sdk-boundary/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    SDK accounting and tools
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_8" id="__nav_5_8_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Tools and extensions
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_8">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Tools and extensions
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../guides/cli/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Command line
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../guides/browser/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Artifact history browser
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../guides/extensions/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Extension contracts
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Development
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_6" id="__nav_6_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Development
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../contributor-code-tour/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Contributing
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../architecture/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Architecture
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../status/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Current status
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../milestones/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Roadmap
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../research/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Research map
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../applications/ideas/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Application ideas
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../design/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Design records
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../evidence/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Evidence and verification
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#source-and-scope" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Source and scope
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mutations-that-did-not-redden-a-law" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Mutations that did not redden a law
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#failed-attempts-retained" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Failed attempts retained
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#checks" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Checks
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#live-no-spend" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Live, no spend
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#live-capabilities" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Live, capabilities
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#final-re-verification" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Final re-verification
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#negative-claims" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Negative claims
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#september-26-integration-follow-up" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        September 26 integration follow-up
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#september-26-boundary-follow-up" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        September 26 boundary follow-up
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+                
+
+
+
+
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+    <a href="https://github.com/sentient-xyz/meta-evolve/edit/main/docs/project/worker-administration-verification.md" title="Edit this page" class="md-content__button md-icon" rel="edit">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m14.06 9 .94.94L5.92 19H5v-.92zm3.6-6c-.25 0-.51.1-.7.29l-1.83 1.83 3.75 3.75 1.83-1.83c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.2-.2-.45-.29-.71-.29m-3.6 3.19L3 17.25V21h3.75L17.81 9.94z"/></svg>
+    </a>
+  
+  
+    
+      
+    
+    <a href="https://github.com/sentient-xyz/meta-evolve/raw/main/docs/project/worker-administration-verification.md" title="View source of this page" class="md-content__button md-icon">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 9a3 3 0 0 1 3 3 3 3 0 0 1-3 3 3 3 0 0 1-3-3 3 3 0 0 1 3-3m0-4.5c5 0 9.27 3.11 11 7.5-1.73 4.39-6 7.5-11 7.5S2.73 16.39 1 12c1.73-4.39 6-7.5 11-7.5M3.18 12a9.821 9.821 0 0 0 17.64 0 9.821 9.821 0 0 0-17.64 0"/></svg>
+    </a>
+  
+
+
+<h1 id="trusted-worker-administration-verification">Trusted-worker administration verification<a class="headerlink" href="#trusted-worker-administration-verification" title="Permanent link">&para;</a></h1>
+<p>Initially verified September 23, 2026 for
+<a href="https://github.com/sentient-xyz/meta-evolve/issues/203">#203</a>, the M11.4 slice.
+The <a href="../../design/worker-administration-plan/">plan</a> records scope and the
+decisions AD1–AD7 and PD1–PD8; the
+<a href="../../design/m11-trusted-concurrency/#worker-administration">design record</a>
+owns the rules; the <a href="../../guides/cli/#worker-processes">command-line guide</a>
+owns usage.</p>
+<h2 id="source-and-scope">Source and scope<a class="headerlink" href="#source-and-scope" title="Permanent link">&para;</a></h2>
+<p>The checks below ran on local branch <code>m11.4-pr2-capabilities-and-record</code>, whose
+first 26 commits are the registry-and-revocation pull request (tip
+<code>a62e3858</code>) and whose base is <code>origin/main</code> at
+<code>69354f9ebb66df37e5bfc78c26aecff2d1d78fae</code>. The branch was first verified before
+review; the sections through <a href="#live-no-spend">Live, no spend</a> are that
+round's, with each commit it cites rebased to the SHA it has now. A review
+round from the repository owner followed, as the nine rows beginning
+"Review:" below. A <code>/pr-review</code> round on the pushed drafts came next, as
+the eleven rows beginning "pr-review:", and every check was run again on the
+result; see
+<a href="#final-re-verification">final re-verification</a>. These sections retain the
+historical checks and CLI transcripts at <code>c0781f12</code>; the follow-up below records
+the current integration changes.</p>
+<table>
+<thead>
+<tr>
+<th>Commit</th>
+<th>Change</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>88055abb</code></td>
+<td>Move the diagnosis rule out of the lease and ledger modules: a pure move that frees both for the revocation sweep.</td>
+</tr>
+<tr>
+<td><code>a090dbb6</code></td>
+<td>The trusted worker in the domain; the id grammar and reserved namespace get one home; <code>WorkerNotTrusted</code>.</td>
+</tr>
+<tr>
+<td><code>b258b0ac</code></td>
+<td>The trusted-worker port (reader and authority), its in-memory adapter and the registry laws.</td>
+</tr>
+<tr>
+<td><code>95857e68</code></td>
+<td>Store schema 5: the <code>trusted_workers</code> table and the write guard on <code>work_items</code>; schema 4 still opens read-only.</td>
+</tr>
+<tr>
+<td><code>1560ac58</code></td>
+<td>The SQLite registry and <code>Storage.trusted_workers()</code>.</td>
+</tr>
+<tr>
+<td><code>e43ad3b7</code></td>
+<td>The door: an operator's worker is admitted only if the store trusts it, read at <code>Hello</code> and again before the reservation.</td>
+</tr>
+<tr>
+<td><code>2f2c638a</code></td>
+<td>Both brokers refuse a claim from a worker the store does not trust.</td>
+</tr>
+<tr>
+<td><code>ca4ed8bd</code></td>
+<td>A revoked worker's lease is <code>STALE_GENERATION</code> at the next transactional check.</td>
+</tr>
+<tr>
+<td><code>ec10930a</code></td>
+<td>The revocation sweep frees the lease at the next broker write and records <code>WorkerRevoked</code>.</td>
+</tr>
+<tr>
+<td><code>b54a0e65</code></td>
+<td>The <code>meta-evolve workers</code> verb: <code>add</code>, <code>list</code> and <code>revoke</code>.</td>
+</tr>
+<tr>
+<td><code>b1f6d3cf</code></td>
+<td>Enrolment and revocation proved with real processes; guides and record updated.</td>
+</tr>
+<tr>
+<td><code>6eeebb4d</code></td>
+<td>First two-axis review: the durable reader is a real reader; registry reads fail typed.</td>
+</tr>
+<tr>
+<td><code>24bb74e1</code></td>
+<td>Second review: a damaged trust row's scope stated honestly; the allow-list read lazily.</td>
+</tr>
+<tr>
+<td><code>71f9585e</code></td>
+<td>Review: a malformed id is refused by <code>trust</code> and <code>revoke</code> alike, typed; <code>TrustedWorker</code> backstops it.</td>
+</tr>
+<tr>
+<td><code>72f0e335</code></td>
+<td>Review: a read-only registry reads the schema version with its rows, so a held reader sees another connection's migration.</td>
+</tr>
+<tr>
+<td><code>3da528c5</code></td>
+<td>Review: <code>_answer</code> shows answer, release and disconnect in order; <code>dispatch_revocation.py</code> keeps only the predicate.</td>
+</tr>
+<tr>
+<td><code>f2ef6368</code></td>
+<td>Review: the directory AST ban is replaced by a law on the real <code>_terms</code> lookup; PD5's evidence restated.</td>
+</tr>
+<tr>
+<td><code>dac9594c</code></td>
+<td>Review: mypy now checks the handoff path (<code>distributed_drive</code>, <code>dispatch_admission</code>, <code>host</code>, <code>worker_identity</code>, <code>admission</code>, the port).</td>
+</tr>
+<tr>
+<td><code>22e01018</code></td>
+<td>Review: comments trimmed in nine registry modules, comments and docstrings only.</td>
+</tr>
+<tr>
+<td><code>37a17c38</code></td>
+<td>pr-review: rollover runs the revocation arm, so a restarted drive's first write records why it freed a revoked holder's row; a lease both revoked and overdue is lawed.</td>
+</tr>
+<tr>
+<td><code>09433d7b</code></td>
+<td>pr-review: <code>workers revoke</code> refuses an id nothing enrols from a read-only look, so a schema-4 store is never migrated only to refuse.</td>
+</tr>
+<tr>
+<td><code>19ab03c7</code></td>
+<td>pr-review: every <code>sqlite3</code> failure of a trust-row read is <code>DurableStoreError</code>, not only <code>OperationalError</code>.</td>
+</tr>
+<tr>
+<td><code>639970ed</code></td>
+<td>pr-review: a damaged trust row stops any listening run its worker connects to; the guide and record say so, and a law pins it.</td>
+</tr>
+<tr>
+<td><code>7908f8e7</code></td>
+<td>pr-review: a revoked holder's item is released even when its answer fails to send; the answer is described as best effort.</td>
+</tr>
+<tr>
+<td><code>7335ba5d</code></td>
+<td>pr-review: four docstrings say what the lookup asks for, not that write authority is unreachable.</td>
+</tr>
+<tr>
+<td><code>a62e3858</code></td>
+<td>pr-review: a guard trigger kept under its name with another body is lawed as corruption.</td>
+</tr>
+<tr>
+<td><code>b25c1859</code></td>
+<td>#382: an unexpected raise on unauthenticated bytes refuses the connection, not the run.</td>
+</tr>
+<tr>
+<td><code>310b1a06</code></td>
+<td>The capability matcher.</td>
+</tr>
+<tr>
+<td><code>e75a1891</code></td>
+<td>Capabilities matched at admission; <code>workers add --capability KEY=VALUE</code>.</td>
+</tr>
+<tr>
+<td><code>4cbc927e</code></td>
+<td>Environment drift reported on resume, never refused (AD6).</td>
+</tr>
+<tr>
+<td><code>0dfebf06</code></td>
+<td>The consolidated evidence that workers mint no identity.</td>
+</tr>
+<tr>
+<td><code>f542e863</code></td>
+<td>The record's worker-administration section, status labels, source forward references, this receipt.</td>
+</tr>
+<tr>
+<td><code>25329881</code></td>
+<td>Review fixes: spawned runs with conflicting requirements lawed; a missing capability's refusal worded precisely; plan-label cites disambiguated; one value renderer.</td>
+</tr>
+<tr>
+<td><code>514ac940</code></td>
+<td>The previous round's final re-verification section of this receipt.</td>
+</tr>
+<tr>
+<td><code>8d4e81b5</code></td>
+<td>Review: a refusal too large to frame is sent short, and costs its connection, never the run; capability refusals quote at most 200 characters.</td>
+</tr>
+<tr>
+<td><code>778cafda</code></td>
+<td>Review: the resume report validates history once and fingerprints only a distributed run; <code>EnvironmentDrift</code> moves to <code>environment.py</code>.</td>
+</tr>
+<tr>
+<td><code>9976aeaf</code></td>
+<td>Review: comments trimmed in the capability modules; three record laws check structure, not sentences.</td>
+</tr>
+<tr>
+<td><code>6f05b895</code></td>
+<td>pr-review: <code>--capability</code> refuses a lone surrogate and a key repeated inside a JSON object as usage errors, before any store opens.</td>
+</tr>
+<tr>
+<td><code>7bd6fd9c</code></td>
+<td>pr-review: <code>Run.environment_drift()</code> and <code>EnvironmentDrift</code> in the programming model.</td>
+</tr>
+<tr>
+<td><code>8b62c7ed</code></td>
+<td>pr-review: an oversized <code>worker_nonce</code> is refused by name, <code>Terms</code> is sized at the minted nonce length, a raw <code>sqlite3</code> fault stops the run, and <code>Refused</code> keeps the exception.</td>
+</tr>
+<tr>
+<td><code>c891a37a</code></td>
+<td>pr-review: the refusal's 200-character quote cut-off is pinned by a unit law.</td>
+</tr>
+<tr>
+<td><code>c0781f12</code></td>
+<td>This receipt, brought up to date for the <code>/pr-review</code> round.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="mutations-that-did-not-redden-a-law">Mutations that did not redden a law<a class="headerlink" href="#mutations-that-did-not-redden-a-law" title="Permanent link">&para;</a></h2>
+<p>Every law was planted with its named mutation and watched going red, except
+these. They are retained as the commits reported them. Every law the review
+round and the <code>/pr-review</code> round added went red under its named mutation
+(the one law that pins existing behaviour is noted below), so none is listed here.</p>
+<ul>
+<li><strong>Removing the <code>Hello</code> trust read alone</strong> (<code>b1f6d3cf</code>) leaves the process
+  laws green: the second read, just before the reservation, refuses the same
+  worker. The ordering is pinned in <code>tests/test_worker_trust_admission.py</code>
+  instead.</li>
+<li><strong>Dropping the sweep's generation arm on the submission path</strong> (<code>b1f6d3cf</code>)
+  leaves the process law green: answering a revoked holder releases its lease,
+  and that release is the broker write that frees the row. The sweep laws pin
+  the arm.</li>
+<li><strong>Keeping the verifier when the sweep frees a lease</strong> (<code>ec10930a</code>) leaves
+  every law green: the cause write already refuses a later diagnosis, and every
+  other path meets the generation check first. The verifier is cleared because
+  the record requires it and because it is one statement shared with <code>release</code>
+  and rollover.</li>
+<li><strong><code>workers list</code> opening the store durable</strong> (<code>b54a0e65</code>) leaves the
+  held-store law green, because SQLite tolerates a second writer; the
+  read-only claim rests on the byte-identity law.</li>
+<li><strong>Skipping the shared freeze</strong> of a declared capability (<code>e75a1891</code>) stays
+  green: the value is also frozen by the SQLite encoding and compared by
+  canonical bytes, so any one of the three is masked by the other two. The
+  command-line array law goes red instead under "the command line takes arrays
+  and objects as literal text".</li>
+<li><strong>Three identity mutations</strong> (<code>0dfebf06</code>) go red through the replay fold's
+  own refusal rather than the law's assertion: a second guard in the domain.</li>
+<li><strong>The revoked-door law's cost assertions</strong> (<code>24bb74e1</code>) — rows ready at
+  attempt 0, epoch unchanged — cannot redden under a door mutation, because the
+  handshake holds no broker and <code>acquire</code> refuses a revoked worker on its own.
+  They record the refusal's cost rather than guard it.</li>
+</ul>
+<h2 id="failed-attempts-retained">Failed attempts retained<a class="headerlink" href="#failed-attempts-retained" title="Permanent link">&para;</a></h2>
+<ul>
+<li>The first real-process revocation law found a defect the wire laws had
+  missed (<code>b1f6d3cf</code>). A revoked holder's result is classified by
+  <code>submission_status</code>, which is a read and moves nothing, and the dispatcher
+  drops the binding before settling, so the row stayed LEASED with nothing
+  bound to it and the undecidable-frontier refusal aborted the drive. "Freed at
+  the next broker write" had no next write on that path. Answering a revoked
+  holder now releases its lease first. The wire law that had asserted
+  <code>rows() == before</code> for that path was pinning the stranding, and now asserts
+  the release.</li>
+<li>The durability guide, the plan page, a law's docstring and a commit message
+  once said an unreadable trust row stops every run in the store. The sweep is
+  scoped to its run, so it stops only the runs its worker holds a lease in; the
+  documents were corrected in <code>24bb74e1</code> and the law now pins both halves.</li>
+<li>The byte-gate script used for the first pull request drives inline durable-local
+  runs, distributed runs at widths 1–3 under the default inline execution, and
+  three failure paths. It spawns no worker process, so on its own it does not
+  cover <code>--workers N</code>. For this receipt a second script drove the same fixture
+  through <code>WorkerProcesses(1)</code> and <code>WorkerProcesses(2)</code> on both trees; see the
+  gate table.</li>
+<li>During the live check below, a first <code>ps | grep -c</code> for leftover workers
+  counted 1. The one match was the invoking shell's own command line, which
+  contained the search text; listing the matching lines on the rerun showed no
+  worker or dispatcher process.</li>
+</ul>
+<h2 id="checks">Checks<a class="headerlink" href="#checks" title="Permanent link">&para;</a></h2>
+<p>Environment: macOS 26.5, Python 3.12.11, SQLite 3.49.1 as linked by that
+interpreter, with the locked development, browser and documentation
+dependencies installed in the isolated worktree.</p>
+<table>
+<thead>
+<tr>
+<th>Check</th>
+<th>Result</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>.venv/bin/python -m pytest -q -p no:cacheprovider</code></td>
+<td><strong>7,128 passed, 94 skipped</strong>, no failures, 668.79 seconds.</td>
+</tr>
+<tr>
+<td><code>uv run --locked ruff check src</code></td>
+<td>Passed.</td>
+</tr>
+<tr>
+<td><code>uv run --locked mypy</code></td>
+<td>Passed: 24 configured source files.</td>
+</tr>
+<tr>
+<td><code>uv run python -m compileall -q -x '/candidate/' src tests examples</code>, after the suite; the resulting <code>__pycache__</code> directories were then removed</td>
+<td>Passed.</td>
+</tr>
+<tr>
+<td><code>uv run --locked --group docs mkdocs build --strict</code></td>
+<td>Passed with no MkDocs warning of its own. The 93 pandoc "Div … unclosed" notices printed during the notebook conversion also appear on <code>origin/main</code>.</td>
+</tr>
+<tr>
+<td>Five canonical CI examples (number search, policy comparison, text optimization, SQL migrations, durable operations)</td>
+<td>All exited 0.</td>
+</tr>
+<tr>
+<td>Experiment 17 <code>driver.py --dry-run</code></td>
+<td>All 11 scenarios passed; none errored, failed a check, or omitted its verdict. <code>StubProvider</code>, no provider spend.</td>
+</tr>
+<tr>
+<td>Byte gate, inline: the first pull request's script with this tree's <code>src</code> on <code>PYTHONPATH</code>, against its capture from <code>origin/main</code></td>
+<td>Byte-identical (118,089 bytes): durable-local, distributed widths 1–3 and three failure paths.</td>
+</tr>
+<tr>
+<td>Byte gate, spawned workers: the same fixture through <code>WorkerProcesses(1)</code> and <code>WorkerProcesses(2)</code>, <code>origin/main</code> against this tree, each side run twice</td>
+<td>Event bytes (ordered for one worker, as a sorted multiset for two) and work rows identical; each side agreed with itself across runs; this tree's registry is empty after both.</td>
+</tr>
+</tbody>
+</table>
+<p>The 94 skips comprise 36 inapplicable extension-conformance laws (24 cohort
+laws for a program with no cohort method, 12 codec and evaluator fixture laws a
+fixture declared empty), 55 checks needing an optional package this environment
+does not install (<code>pydantic</code>, <code>openai</code>, <code>openai_codex</code>, <code>claude_agent_sdk</code>), and
+3 platform cases: macOS has no Landlock, no <code>/proc/self/root</code>, and an
+enforcement mechanism that makes the no-mechanism case inapplicable.</p>
+<p>The suite ran once, on the tree with this receipt present and its results not
+yet filled in; filling them changed only this table and this paragraph. After
+that the record and receipt laws, the documentation ownership and consolidation
+laws and the strict build were run again and passed. One design-record cell was
+also reworded after the suite started, to say that a missing capability is
+refused naming the key and the required value rather than "both values"; the
+same laws and the strict build were rerun after it.</p>
+<h2 id="live-no-spend">Live, no spend<a class="headerlink" href="#live-no-spend" title="Permanent link">&para;</a></h2>
+<p>Real local processes in a scratch directory, with the fixture experiment the
+process tests use (<code>tests/worker_process_support.py</code>, whose evaluator waits on a
+per-process marker file) and no model call or network beyond <code>127.0.0.1</code>.
+Every process ran under a hard wall-clock alarm (<code>perl -e 'alarm N; exec @ARGV'</code>).
+Output trimmed; the run id is <code>run-dd36512e…</code>.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>$ meta-evolve workers add shed-1 --storage store
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>enrolled shed-1 at generation 1
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>$ meta-evolve workers add shed-2 --storage store
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>enrolled shed-2 at generation 1
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>$ meta-evolve run worker_fixture.py --storage store --mode distributed \
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>    --listen 127.0.0.1:55929 --key-file worker.key --lease-seconds 10 &amp;
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a># rows, read on a second connection while the dispatcher holds the store:
+<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>epoch 2   evaluation READY attempts 0
+<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>$ meta-evolve worker --module worker_fixture.py --connect 127.0.0.1:55929 \
+<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>    --key-file worker.key --worker-id ghost
+<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>meta-evolve worker: refused (this worker is not enrolled in the dispatcher&#39;s
+<a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>store: enrol it with `meta-evolve workers add ghost --storage &lt;path&gt;`)
+<a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a>exit 2
+<a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a># rows afterwards: identical, epoch 2, READY, attempts 0
+<a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a>$ meta-evolve worker ... --worker-id shed-1 &amp;     # alone, so it takes the item
+<a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a># shed-1 is inside its evaluation; then shed-2 is started
+<a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a>epoch 2   evaluation LEASED attempts 1
+<a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a>$ meta-evolve workers revoke shed-1 --storage store
+<a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a>revoked shed-1 at generation 2
+<a id="__codelineno-0-20" name="__codelineno-0-20" href="#__codelineno-0-20"></a>this frees every lease it holds, in every run in this store, at that run&#39;s
+<a id="__codelineno-0-21" name="__codelineno-0-21" href="#__codelineno-0-21"></a>next broker transaction
+<a id="__codelineno-0-22" name="__codelineno-0-22" href="#__codelineno-0-22"></a># shed-1&#39;s call is then released; its result meets the revoked store
+<a id="__codelineno-0-23" name="__codelineno-0-23" href="#__codelineno-0-23"></a>meta-evolve worker: refused (this worker&#39;s enrolment was revoked by the
+<a id="__codelineno-0-24" name="__codelineno-0-24" href="#__codelineno-0-24"></a>store&#39;s operator, at generation 2)
+<a id="__codelineno-0-25" name="__codelineno-0-25" href="#__codelineno-0-25"></a>shed-1 exit 2
+<a id="__codelineno-0-26" name="__codelineno-0-26" href="#__codelineno-0-26"></a># the dispatcher exits 0: lifecycle complete, stop trial_limit_reached,
+<a id="__codelineno-0-27" name="__codelineno-0-27" href="#__codelineno-0-27"></a># evaluations 3, usage trials=2 evaluations=3 tokens=0 spend=$0.000000
+<a id="__codelineno-0-28" name="__codelineno-0-28" href="#__codelineno-0-28"></a>shed-2 exit 0
+<a id="__codelineno-0-29" name="__codelineno-0-29" href="#__codelineno-0-29"></a># rows after the run:
+<a id="__codelineno-0-30" name="__codelineno-0-30" href="#__codelineno-0-30"></a>evaluation COMPLETED attempts 2 last_failure WorkerRevoked last_failure_attempt 1
+<a id="__codelineno-0-31" name="__codelineno-0-31" href="#__codelineno-0-31"></a>(the four other rows COMPLETED at attempts 1, no failure)
+<a id="__codelineno-0-32" name="__codelineno-0-32" href="#__codelineno-0-32"></a>$ meta-evolve workers list --storage store
+<a id="__codelineno-0-33" name="__codelineno-0-33" href="#__codelineno-0-33"></a>shed-1                  revoked  generation 2  {}
+<a id="__codelineno-0-34" name="__codelineno-0-34" href="#__codelineno-0-34"></a>shed-2                  trusted  generation 1  {}
+</code></pre></div>
+<p>The unenrolled worker was refused with the run untouched: the same rows and
+epoch before and after it, and the same port then admitted <code>shed-1</code> and
+<code>shed-2</code>. The revoked worker exited 2, the item it held finished on the other
+worker at <code>attempts=2</code> with the revocation recorded against the first attempt,
+the run completed, and <code>workers list</code> shows generation 2, revoked. No worker or
+dispatcher process was left running.</p>
+<p><strong>Resume in a changed environment.</strong> A <code>uv sync</code> could not be made cheaply and
+reversibly in the shared worktree environment, so the environment was changed
+another honest way: one more installed distribution. A <code>.dist-info</code> directory
+for a package <code>live-drift-probe</code> 0.0.1, placed on <code>PYTHONPATH</code>, is a
+distribution <code>importlib.metadata</code> reports, so it moves the fingerprint exactly
+as installing a package would, without touching the virtual environment. A
+second store's run was started listening, never served, and killed with
+<code>SIGKILL</code>; it was then resumed in the changed environment:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>$ python -c &#39;...environment_fingerprint()&#39;                     # unchanged
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>meta-evolve/environment/v1:0f9c5a5254af9cec…
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>$ PYTHONPATH=drift-site python -c &#39;...environment_fingerprint()&#39;
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>meta-evolve/environment/v1:ac1b7481919f00b7…
+<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a># Run.environment_drift(): None unchanged, and in the changed environment
+<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>environment changed since start: recorded 0f9c5a5254af, current ac1b7481919f
+<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>(one digest over every input, so it cannot say which one changed)
+<a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a>$ PYTHONPATH=drift-site meta-evolve resume run-dd36512e… \
+<a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a>    --module worker_fixture.py --storage store2 --workers 1 --lease-seconds 10
+<a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a>environment changed since start: recorded 0f9c5a5254af, current ac1b7481919f
+<a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a>(one digest over every input, so it cannot say which one changed)
+<a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a>run             run-dd36512e…
+<a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a>lifecycle       complete
+<a id="__codelineno-1-14" name="__codelineno-1-14" href="#__codelineno-1-14"></a>...
+<a id="__codelineno-1-15" name="__codelineno-1-15" href="#__codelineno-1-15"></a>exit 0
+<a id="__codelineno-1-16" name="__codelineno-1-16" href="#__codelineno-1-16"></a># rows: epoch 3, all five COMPLETED at attempts 1
+</code></pre></div>
+<p>The drift row printed and the resume proceeded to completion, its spawned
+worker admitted against the resuming dispatcher's own build. The same behaviour
+is lawed in <code>tests/test_resume_environment_drift.py</code>, for the inline and the
+spawned-worker resume.</p>
+<h2 id="live-capabilities">Live, capabilities<a class="headerlink" href="#live-capabilities" title="Permanent link">&para;</a></h2>
+<p>Before the review round, a second live check exercised capabilities, with
+the same fixture's evaluator declaring <code>work_requirements={"gpu": True}</code>:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>$ meta-evolve workers add shed-1 --storage store --capability gpu=true
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>enrolled shed-1 at generation 1
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>$ meta-evolve workers add shed-2 --storage store --capability gpu=true --capability arch=arm64
+<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>$ meta-evolve workers add cpu-1 --storage store --capability gpu=false
+<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>$ meta-evolve workers add bad --storage store --capability gpu=true --capability gpu=false
+<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>meta-evolve workers add: error: argument --capability: the capability &#39;gpu&#39; is declared twice
+<a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a>exit 2
+<a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a># listening run started; garbage bytes sent to its port by a peer holding no key:
+<a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a># the host sent its challenge, and the dispatcher was still running afterwards
+<a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a># (which refusal arm met the bytes was not observed; the laws in
+<a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a># tests/test_handshake_unexpected_raise.py pin that)
+<a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a>$ meta-evolve worker ... --worker-id ghost
+<a id="__codelineno-2-13" name="__codelineno-2-13" href="#__codelineno-2-13"></a>meta-evolve worker: refused (this worker is not enrolled in the dispatcher&#39;s
+<a id="__codelineno-2-14" name="__codelineno-2-14" href="#__codelineno-2-14"></a>store: enrol it with `meta-evolve workers add ghost --storage &lt;path&gt;`)
+<a id="__codelineno-2-15" name="__codelineno-2-15" href="#__codelineno-2-15"></a>exit 2
+<a id="__codelineno-2-16" name="__codelineno-2-16" href="#__codelineno-2-16"></a>$ meta-evolve worker ... --worker-id cpu-1
+<a id="__codelineno-2-17" name="__codelineno-2-17" href="#__codelineno-2-17"></a>meta-evolve worker: refused (this run requires the capability gpu=true, and
+<a id="__codelineno-2-18" name="__codelineno-2-18" href="#__codelineno-2-18"></a>this worker declares gpu=false)
+<a id="__codelineno-2-19" name="__codelineno-2-19" href="#__codelineno-2-19"></a>exit 2
+<a id="__codelineno-2-20" name="__codelineno-2-20" href="#__codelineno-2-20"></a># rows and epoch identical before and after the junk bytes, ghost and cpu-1
+<a id="__codelineno-2-21" name="__codelineno-2-21" href="#__codelineno-2-21"></a># shed-1 inside its evaluation, shed-2 started, shed-1 revoked mid-call:
+<a id="__codelineno-2-22" name="__codelineno-2-22" href="#__codelineno-2-22"></a>shed-1 exit 2 (revoked at generation 2); dispatcher exit 0, lifecycle complete
+<a id="__codelineno-2-23" name="__codelineno-2-23" href="#__codelineno-2-23"></a>evaluation COMPLETED attempts 2 last_failure WorkerRevoked last_failure_attempt 1
+<a id="__codelineno-2-24" name="__codelineno-2-24" href="#__codelineno-2-24"></a>$ meta-evolve workers list --storage store
+<a id="__codelineno-2-25" name="__codelineno-2-25" href="#__codelineno-2-25"></a>cpu-1                   trusted  generation 1  {&quot;gpu&quot;:false}
+<a id="__codelineno-2-26" name="__codelineno-2-26" href="#__codelineno-2-26"></a>shed-1                  revoked  generation 2  {&quot;gpu&quot;:true}
+<a id="__codelineno-2-27" name="__codelineno-2-27" href="#__codelineno-2-27"></a>shed-2                  trusted  generation 1  {&quot;arch&quot;:&quot;arm64&quot;,&quot;gpu&quot;:true}
+<a id="__codelineno-2-28" name="__codelineno-2-28" href="#__codelineno-2-28"></a>$ meta-evolve workers add shed-2 ... --capability ram=64       # widen
+<a id="__codelineno-2-29" name="__codelineno-2-29" href="#__codelineno-2-29"></a>widened shed-2&#39;s capabilities at generation 1: {&quot;arch&quot;:&quot;arm64&quot;,&quot;gpu&quot;:true,&quot;ram&quot;:64}
+<a id="__codelineno-2-30" name="__codelineno-2-30" href="#__codelineno-2-30"></a>$ meta-evolve workers add shed-2 --storage store --capability gpu=true   # narrow
+<a id="__codelineno-2-31" name="__codelineno-2-31" href="#__codelineno-2-31"></a>error: InvalidTrustedWorker: ... the declaration drops arch, ram; a trusted
+<a id="__codelineno-2-32" name="__codelineno-2-32" href="#__codelineno-2-32"></a>worker&#39;s declaration is only widened; revoke it first to drop or change one
+<a id="__codelineno-2-33" name="__codelineno-2-33" href="#__codelineno-2-33"></a>exit 1
+<a id="__codelineno-2-34" name="__codelineno-2-34" href="#__codelineno-2-34"></a># a run whose proposer requires gpu=true and evaluator gpu=false:
+<a id="__codelineno-2-35" name="__codelineno-2-35" href="#__codelineno-2-35"></a>$ meta-evolve run conflict_fixture.py ... --listen 127.0.0.1:PORT --key-file keyB
+<a id="__codelineno-2-36" name="__codelineno-2-36" href="#__codelineno-2-36"></a>error: CapabilityError: no worker can run this run: the evaluator tests:score@1
+<a id="__codelineno-2-37" name="__codelineno-2-37" href="#__codelineno-2-37"></a>requires gpu=false and the proposer tests:increment@1 requires gpu=true
+<a id="__codelineno-2-38" name="__codelineno-2-38" href="#__codelineno-2-38"></a>exit 1                                  # no key file written
+<a id="__codelineno-2-39" name="__codelineno-2-39" href="#__codelineno-2-39"></a>$ meta-evolve run conflict_fixture.py ... --workers 1
+<a id="__codelineno-2-40" name="__codelineno-2-40" href="#__codelineno-2-40"></a>exit 0                                  # spawned workers match nothing
+</code></pre></div>
+<p>The drift resume above was repeated on this tree with the same result: the row
+printed, and the resume completed with exit 0. No worker or dispatcher process
+was left running.</p>
+<h2 id="final-re-verification">Final re-verification<a class="headerlink" href="#final-re-verification" title="Permanent link">&para;</a></h2>
+<p>After the <code>/pr-review</code> round, every check was run again on <code>c891a37a</code>, with
+<code>origin/main</code> at <code>69354f9e</code>:</p>
+<table>
+<thead>
+<tr>
+<th>Check</th>
+<th>Result</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Full suite</td>
+<td><strong>7,160 passed, 94 skipped</strong>, no failures, 1109.85 seconds.</td>
+</tr>
+<tr>
+<td><code>ruff check src</code>, <code>mypy</code> (30 configured source files), strict docs build</td>
+<td>Passed; the same 93 pandoc notices and no MkDocs warning of its own.</td>
+</tr>
+<tr>
+<td><code>compileall</code>, after the suite</td>
+<td>Passed.</td>
+</tr>
+<tr>
+<td>Five canonical CI examples; experiment 17 <code>--dry-run</code></td>
+<td>All exited 0; all 11 scenarios passed.</td>
+</tr>
+<tr>
+<td>Byte gate, inline</td>
+<td>Byte-identical to the <code>origin/main</code> capture (118,089 bytes).</td>
+</tr>
+<tr>
+<td>Byte gate, spawned workers (<code>WorkerProcesses(1)</code> and <code>(2)</code>)</td>
+<td>Events and work rows identical; the allow-list reads <code>"n/a"</code> on <code>origin/main</code> and <code>[]</code> here.</td>
+</tr>
+</tbody>
+</table>
+<p>The review round's laws, each seen red before its fix and under its named
+mutation:</p>
+<ul>
+<li>A malformed id is refused by <code>trust</code> and <code>revoke</code> alike, typed, on both
+  registries (<code>check_a_malformed_id_is_neither_trusted_nor_revoked</code>); red with
+  only the record's backstop in place.</li>
+<li>A read-only registry held across another connection's migration sees the
+  enrolment (<code>test_a_held_reader_sees_a_migration_another_connection_made</code>).</li>
+<li>The listening host obtains a live reader before opening, and never asks for
+  write authority (<code>tests/test_trust_lookup_handoff.py</code>); red when <code>_terms</code> asks for
+  authority eagerly or inside the closure.</li>
+<li>A real host refuses a 20,000-character declaration with the truncated reason
+  and a healthy worker then finishes the run; red without the truncation. A
+  keyless oversized <code>kind</code>, an oversized manifest mismatch and the host's own
+  record of the full reason are each red without the fallback
+  (<code>tests/test_handshake_unexpected_raise.py</code>).</li>
+<li>A durable-local resume report validates history once and computes no
+  fingerprint, and a drifted distributed run still leads with the drift
+  (<code>tests/test_resume_environment_drift.py</code>); 2 loads and 1 fingerprint before.</li>
+</ul>
+<p>The <code>/pr-review</code> round's laws, each seen red before its fix or under its named
+mutation:</p>
+<ul>
+<li>Rollover records <code>WorkerRevoked</code> for a revoked holder's row, on both adapters
+  (<code>check_a_rollover_records_why_it_frees_a_revoked_workers_row</code>); red before
+  the fix. A lease revoked and overdue at once reports the revoke
+  (<code>check_a_lease_both_revoked_and_overdue_reports_the_revoke</code>); red when
+  expiry is weighed first.</li>
+<li><code>workers revoke</code> on a copy of a schema-4 capture refuses and leaves every
+  byte alone (<code>tests/test_cli_worker_administration_stores.py</code>); red before
+  the fix: the old command stamped it schema 5.</li>
+<li>A trust-row read of a malformed file is <code>DurableStoreError</code> on all three
+  readers (<code>tests/test_trusted_worker_read_faults.py</code>), and a raw <code>sqlite3</code>
+  fault at the door stops the run (<code>tests/test_handshake_escapes.py</code>); red
+  without the typing.</li>
+<li>A revoked holder's item is released when its answer fails to send
+  (<code>tests/test_worker_revocation_send_failure.py</code>); red with the release after
+  the send.</li>
+<li>A guard trigger kept under its name with another body is corruption
+  (<code>tests/test_store_write_guard.py</code>); red when only names are compared.</li>
+<li>A lone surrogate, escaped or from an undecodable argv byte, and a key repeated
+  inside a JSON value are usage errors before any store opens
+  (<code>tests/test_cli_worker_capabilities.py</code>); red before the fix.</li>
+<li>An oversized <code>worker_nonce</code> is refused by name and the door stays open
+  (<code>tests/test_handshake_escapes.py</code>); red without the bound. The host keeps
+  the exception behind a refusal nothing expected
+  (<code>tests/test_handshake_unexpected_raise.py</code>).</li>
+<li>A damaged trust row at the door stops the run
+  (<code>tests/test_damaged_trust_row_at_the_door.py</code>). This pins existing
+  behaviour, so it has no red run.</li>
+</ul>
+<p>The keyless-<code>kind</code> case was not introduced by this branch: on <code>origin/main</code>, one
+unauthenticated frame could stop a run whose frame bound is below the 64 KiB
+<code>Hello</code> limit.</p>
+<h2 id="negative-claims">Negative claims<a class="headerlink" href="#negative-claims" title="Permanent link">&para;</a></h2>
+<ul>
+<li>No paid run was made and none was needed: the live check used the test
+  fixture, and experiment 17 ran with <code>StubProvider</code>.</li>
+<li>Nothing entered the closed wire error map <code>_ERRORS</code>:
+  <code>src/meta_evolve/distributed/messages.py</code> is unchanged on the branch.
+  <code>WorkerRevoked</code> is a cause recorded on a row, never an exception on the wire.</li>
+<li>A host is handed a lookup that reads only through a reader: the store hands
+  out a reader, and <code>tests/test_trust_lookup_handoff.py</code> shows a drive's lookup
+  never asks for write authority. No claim is made that authority is
+  unreachable through the object graph.</li>
+<li>The frozen schema-4 stores under <code>tests/fixtures/api_v01/</code> are untouched: the
+  branch changes nothing under <code>tests/fixtures/</code>, and they open read-only
+  byte-identical.</li>
+<li>No root export, no event byte and no <code>DURABLE_TYPES</code> entry was added.</li>
+<li>This receipt claims no multi-host or TLS validation, no concurrent
+  renewal-versus-expiry or over-capacity race test (#204), no canonical
+  trusted-workers example (#205), and no completion of M11.5–M11.6. The design
+  record stays <strong>Design—not shipped</strong> until the milestone gate closes.</li>
+</ul>
+<h2 id="september-26-integration-follow-up">September 26 integration follow-up<a class="headerlink" href="#september-26-integration-follow-up" title="Permanent link">&para;</a></h2>
+<p>The follow-up to <code>c0781f12</code> addresses the final repository review:</p>
+<ul>
+<li>Administration commands report the row their transaction committed. They no
+  longer classify an operation using a separate earlier read. Two deterministic
+  interleavings over separate SQLite connections cover concurrent revoke during
+  <code>add</code> and concurrent re-enrolment during <code>revoke</code>
+  (<code>tests/test_cli_worker_administration_races.py</code>). The earlier CLI transcripts
+  above remain historical; the command-line guide shows the current output.</li>
+<li>A listening host obtains the store's live enrolment reader before creating its
+  key, binding its port, or rolling the epoch. Missing registry support fails
+  at open; spawned backends leave the factory unused. The handoff tests retain
+  the reader-only boundary and prove that subsequent registry changes are visible.</li>
+<li>Repeated source explanations are condensed. Documentation checks retain
+  published anchors, contract references, availability, and evidence links
+  without requiring exact prose or section adjacency.</li>
+</ul>
+<p>The focused regression set passed all 108 tests, including real worker
+processes. Ruff, mypy's 30 configured files, compilation, and whitespace checks
+also passed. Full integration verification is recorded in the pull request.</p>
+<h2 id="september-26-boundary-follow-up">September 26 boundary follow-up<a class="headerlink" href="#september-26-boundary-follow-up" title="Permanent link">&para;</a></h2>
+<p>Review of the integrated second slice found three remaining input boundaries:</p>
+<ul>
+<li>Nonces of the right character count could grow through JSON escaping and
+  exceed a tight Terms frame bound. Admission now requires the hexadecimal
+  format workers mint. <code>tests/test_handshake_nonce.py</code> covers malformed values,
+  unchanged queued work, and a healthy worker admitted under the same bound.</li>
+<li>Unexpected exceptions retained their connection buffers through an unbounded
+  refusal history. The listener now retains its latest 16 refusals.
+  <code>tests/test_handshake_retention.py</code> verifies eviction, collection of the old
+  handshakes, and preservation of recent exception tracebacks.</li>
+<li>Excessive capability JSON nesting escaped the command-line usage-error path.
+  <code>tests/test_cli_worker_capabilities.py</code> covers both parsing and recursive value
+  validation, with an exit-2 refusal before any store opens.</li>
+</ul>
+<p>All 138 focused regression tests passed, including real worker processes.
+Restoring the three defects made all four targeted regression checks fail;
+the fixes were then restored. Ruff and mypy passed. The follow-up pull request
+retains the full integration check results.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Meta-Evolve &middot; evaluated improvement over versioned artifacts &middot; <a href="https://github.com/sentient-xyz/meta-evolve/blob/main/LICENSE">Apache-2.0</a>
+    </div>
+  
+  
+</div>
+      
+        
+<div class="md-social">
+  
+    
+    
+    
+    
+    <a href="https://github.com/sentient-xyz/meta-evolve" target="_blank" rel="noopener" title="meta-evolve on GitHub" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+      <div class="md-progress" data-md-component="progress" role="progressbar"></div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["content.action.edit", "content.action.view", "content.code.annotate", "content.code.copy", "content.tabs.link", "navigation.footer", "navigation.indexes", "navigation.instant", "navigation.instant.progress", "navigation.path", "navigation.tabs", "navigation.top", "navigation.tracking", "search.highlight", "search.share", "search.suggest", "toc.follow"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+    
+  </body>
+</html>

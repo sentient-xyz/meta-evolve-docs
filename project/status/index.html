@@ -48,16 +48,22 @@
         
         
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Figtree:300,300i,400,400i,700,700i%7CIBM+Plex+Mono:400,400i,700,700i&display=fallback">
-        <style>:root{--md-text-font:"Figtree";--md-code-font:"IBM Plex Mono"}</style>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Hanken+Grotesk:300,300i,400,400i,700,700i%7CIBM+Plex+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Hanken Grotesk";--md-code-font:"IBM Plex Mono"}</style>
       
     
     
       <link rel="stylesheet" href="../../assets/_mkdocstrings.css">
     
+      <link rel="stylesheet" href="../../stylesheets/tokens.css">
+    
       <link rel="stylesheet" href="../../stylesheets/extra.css">
     
+      <link rel="stylesheet" href="../../stylesheets/chrome.css">
+    
       <link rel="stylesheet" href="../../stylesheets/home.css">
+    
+      <link rel="stylesheet" href="../../stylesheets/loop.css">
     
     <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
@@ -67,6 +73,8 @@
     
   
   <meta name="color-scheme" content="light dark">
+  
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,300..700;1,400..700&display=fallback">
 
   </head>
   
@@ -99,13 +107,12 @@
     
       
 
-  
-
-<header class="md-header md-header--shadow" data-md-component="header">
+<header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
     <a href="../.." title="Meta-Evolve" class="md-header__button md-logo" aria-label="Meta-Evolve" data-md-component="logo">
       
-  <img src="../../assets/logo.svg" alt="logo">
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 3.5 21 19.5H3z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M12 10 15.4 16H8.6z" fill="#b8975a"/></svg>
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -239,6 +246,149 @@
       
         
           
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../.." class="md-tabs__link">
+          
+  
+  
+    
+  
+  Start
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../guides/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Guides
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../examples/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Examples
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../concepts/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Concepts
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../reference/components/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Reference
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Development
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
         
       
       <main class="md-main" data-md-component="main">
@@ -252,12 +402,15 @@
                     
 
 
+  
 
-<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
     <a href="../.." title="Meta-Evolve" class="md-nav__button md-logo" aria-label="Meta-Evolve" data-md-component="logo">
       
-  <img src="../../assets/logo.svg" alt="logo">
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 3.5 21 19.5H3z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M12 10 15.4 16H8.6z" fill="#b8975a"/></svg>
 
     </a>
     Meta-Evolve
@@ -294,6 +447,9 @@
       
     
     
+    
+      
+      
     
     
     <li class="md-nav__item md-nav__item--nested">
@@ -409,6 +565,9 @@
       
     
     
+    
+      
+      
     
     
     <li class="md-nav__item md-nav__item--nested">
@@ -668,6 +827,9 @@
     
     
     
+      
+      
+    
     
     <li class="md-nav__item md-nav__item--nested">
       
@@ -784,6 +946,9 @@
       
     
     
+    
+      
+      
     
     
     <li class="md-nav__item md-nav__item--nested">
@@ -915,6 +1080,9 @@
     
     
     
+      
+      
+    
     
     <li class="md-nav__item md-nav__item--nested">
       
@@ -1003,6 +1171,9 @@
       
     
     
+    
+      
+      
     
     
     <li class="md-nav__item md-nav__item--nested">
@@ -1239,6 +1410,9 @@
     
     
     
+      
+      
+    
     
     <li class="md-nav__item md-nav__item--nested">
       
@@ -1449,6 +1623,9 @@
       
     
     
+    
+      
+      
     
     
     <li class="md-nav__item md-nav__item--nested">
@@ -1711,6 +1888,9 @@
     
     
     
+      
+      
+    
     
     <li class="md-nav__item md-nav__item--nested">
       
@@ -1908,6 +2088,9 @@
       
     
     
+    
+      
+      
     
     
     <li class="md-nav__item md-nav__item--nested">
@@ -2167,6 +2350,9 @@
     
     
     
+      
+      
+    
     
     <li class="md-nav__item md-nav__item--nested">
       
@@ -2285,6 +2471,9 @@
       
     
     
+    
+      
+      
     
     
     <li class="md-nav__item md-nav__item--nested">
@@ -2449,6 +2638,9 @@
       
     
     
+    
+      
+      
     
     
     <li class="md-nav__item md-nav__item--nested">
@@ -2677,6 +2869,9 @@
     
     
     
+      
+      
+    
     
     <li class="md-nav__item md-nav__item--nested">
       
@@ -2880,6 +3075,9 @@
     
     
     
+      
+      
+    
     
     <li class="md-nav__item md-nav__item--nested">
       
@@ -3050,8 +3248,14 @@
     
     
     
+      
+        
+        
+      
+      
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
         
         
@@ -3077,7 +3281,7 @@
             </a>
             
               
-              <label class="md-nav__link " for="__nav_6" id="__nav_6_label" tabindex="0">
+              <label class="md-nav__link " for="__nav_6" id="__nav_6_label" tabindex="">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
@@ -3546,27 +3750,37 @@ alone does not identify this source revision. Package publication remains
 <p>The <a href="../api-documentation-verification/">integration verification</a> identifies
 source, tests, installed examples, history compatibility, and deployment.</p>
 <h2 id="distributed-execution">Distributed execution<a class="headerlink" href="#distributed-execution" title="Permanent link">&para;</a></h2>
-<p>M11.0–M11.3 are <strong>Shipped</strong>: the design record, concurrency-ready fold, durable
-work table, dispatcher, generational cohorts, and explicit worker process backends.
+<p>M11.0–M11.4 are <strong>Shipped</strong>: the design record, concurrency-ready fold, durable
+work table, dispatcher, generational cohorts, explicit worker process backends,
+and trusted-worker administration.
 Distributed mode defaults to inline execution. Workers can be
 spawned for the run (<code>--workers N</code>) or started by an operator against a listening dispatcher
 (<code>--listen ADDR --key-file PATH</code>, plus <code>meta-evolve worker</code>). Each worker runs
 one call at a time and is admitted by a handshake that authenticates a shared
-key and checks that it runs the same build. Recovery is available in both
+key and checks that it runs the same build. A worker an operator names must also
+be enrolled in the run's store (<code>meta-evolve workers add ID --storage PATH</code>);
+spawned <code>--workers N</code> workers are the dispatcher's own and need no enrolment.
+An enrolment may declare capabilities (<code>--capability KEY=VALUE</code>), and a worker is
+admitted only if they meet every component's <code>work_requirements</code>. Revoking a
+worker (<code>meta-evolve workers revoke</code>) reaches every run in the store: its leases
+are stale at the next transactional check, and the item runs again elsewhere
+under the same trial.
+Recovery is available in both
 directions: a killed dispatcher leaves no spawned worker behind and its run resumes,
 and a killed worker costs one attempt.</p>
 <p>The <a href="../worker-processes-verification/">worker-process verification record</a>
 retains the full stabilization receipt and identifies final stack integration
-separately. The complete M11 gate remains <strong>Design—not shipped</strong>: trusted-worker
-administration (#203), multiprocess load validation (#204), and the canonical
-trusted-workers example (#205) remain unfinished. Measured-budget allocation
+separately; the <a href="../worker-administration-verification/">worker-administration record</a>
+retains M11.4's. The complete M11 gate remains <strong>Design—not shipped</strong>:
+multiprocess load validation (#204) and the canonical trusted-workers example
+(#205) remain unfinished. Measured-budget allocation
 (#206) and a retained public-API live-concurrency capture (#218) also remain open.</p>
 <p>The current scope requires a cohort-capable search policy (<code>BestOfN</code> is the
 shipped example), no pushed context or pull experience, and budgets whose
 finite dimensions are trial and evaluation counts. Finite token, elapsed-time,
 and monetary ceilings are refused. A worker's environment fingerprint is
-matched at admission against the dispatcher's current build; whether a RUN may
-resume on a build that has moved stays deferred. Multi-host use is documented
+matched at admission against the dispatcher's current build; a run resumed on a
+build that has moved is not refused, and <code>resume</code> reports the change. Multi-host use is documented
 and untested: the shared key authenticates a connection and does not encrypt
 it, so a non-loopback address needs TLS that Meta-Evolve does not provide. See the
 <a href="../../milestones/#milestone-11-trusted-concurrency-and-distribution">trusted-concurrency roadmap</a>
@@ -3715,7 +3929,7 @@ not optimization quality or runtime performance.</p>
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["content.action.edit", "content.action.view", "content.code.annotate", "content.code.copy", "content.tabs.link", "navigation.footer", "navigation.indexes", "navigation.instant", "navigation.instant.progress", "navigation.path", "navigation.top", "navigation.tracking", "search.highlight", "search.share", "search.suggest", "toc.follow"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["content.action.edit", "content.action.view", "content.code.annotate", "content.code.copy", "content.tabs.link", "navigation.footer", "navigation.indexes", "navigation.instant", "navigation.instant.progress", "navigation.path", "navigation.tabs", "navigation.top", "navigation.tracking", "search.highlight", "search.share", "search.suggest", "toc.follow"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
       <script src="../../assets/javascripts/bundle.d7400e89.min.js"></script>

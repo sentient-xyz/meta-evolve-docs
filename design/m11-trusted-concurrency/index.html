@@ -44,16 +44,22 @@
         
         
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Figtree:300,300i,400,400i,700,700i%7CIBM+Plex+Mono:400,400i,700,700i&display=fallback">
-        <style>:root{--md-text-font:"Figtree";--md-code-font:"IBM Plex Mono"}</style>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Hanken+Grotesk:300,300i,400,400i,700,700i%7CIBM+Plex+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Hanken Grotesk";--md-code-font:"IBM Plex Mono"}</style>
       
     
     
       <link rel="stylesheet" href="../../assets/_mkdocstrings.css">
     
+      <link rel="stylesheet" href="../../stylesheets/tokens.css">
+    
       <link rel="stylesheet" href="../../stylesheets/extra.css">
     
+      <link rel="stylesheet" href="../../stylesheets/chrome.css">
+    
       <link rel="stylesheet" href="../../stylesheets/home.css">
+    
+      <link rel="stylesheet" href="../../stylesheets/loop.css">
     
     <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
@@ -63,6 +69,8 @@
     
   
   <meta name="color-scheme" content="light dark">
+  
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,300..700;1,400..700&display=fallback">
 
   </head>
   
@@ -95,13 +103,12 @@
     
       
 
-  
-
-<header class="md-header md-header--shadow" data-md-component="header">
+<header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
     <a href="../.." title="Meta-Evolve" class="md-header__button md-logo" aria-label="Meta-Evolve" data-md-component="logo">
       
-  <img src="../../assets/logo.svg" alt="logo">
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 3.5 21 19.5H3z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M12 10 15.4 16H8.6z" fill="#b8975a"/></svg>
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -235,6 +242,147 @@
       
         
           
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../.." class="md-tabs__link">
+          
+  
+  
+    
+  
+  Start
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../guides/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Guides
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../examples/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Examples
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../concepts/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Concepts
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../reference/components/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Reference
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../project/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Development
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
         
       
       <main class="md-main" data-md-component="main">
@@ -248,12 +396,15 @@
                     
 
 
+  
 
-<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
     <a href="../.." title="Meta-Evolve" class="md-nav__button md-logo" aria-label="Meta-Evolve" data-md-component="logo">
       
-  <img src="../../assets/logo.svg" alt="logo">
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 3.5 21 19.5H3z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M12 10 15.4 16H8.6z" fill="#b8975a"/></svg>
 
     </a>
     Meta-Evolve
@@ -290,6 +441,9 @@
       
     
     
+    
+      
+      
     
     
     <li class="md-nav__item md-nav__item--nested">
@@ -405,6 +559,9 @@
       
     
     
+    
+      
+      
     
     
     <li class="md-nav__item md-nav__item--nested">
@@ -664,6 +821,9 @@
     
     
     
+      
+      
+    
     
     <li class="md-nav__item md-nav__item--nested">
       
@@ -780,6 +940,9 @@
       
     
     
+    
+      
+      
     
     
     <li class="md-nav__item md-nav__item--nested">
@@ -911,6 +1074,9 @@
     
     
     
+      
+      
+    
     
     <li class="md-nav__item md-nav__item--nested">
       
@@ -999,6 +1165,9 @@
       
     
     
+    
+      
+      
     
     
     <li class="md-nav__item md-nav__item--nested">
@@ -1235,6 +1404,9 @@
     
     
     
+      
+      
+    
     
     <li class="md-nav__item md-nav__item--nested">
       
@@ -1445,6 +1617,9 @@
       
     
     
+    
+      
+      
     
     
     <li class="md-nav__item md-nav__item--nested">
@@ -1707,6 +1882,9 @@
     
     
     
+      
+      
+    
     
     <li class="md-nav__item md-nav__item--nested">
       
@@ -1904,6 +2082,9 @@
       
     
     
+    
+      
+      
     
     
     <li class="md-nav__item md-nav__item--nested">
@@ -2163,6 +2344,9 @@
     
     
     
+      
+      
+    
     
     <li class="md-nav__item md-nav__item--nested">
       
@@ -2281,6 +2465,9 @@
       
     
     
+    
+      
+      
     
     
     <li class="md-nav__item md-nav__item--nested">
@@ -2445,6 +2632,9 @@
       
     
     
+    
+      
+      
     
     
     <li class="md-nav__item md-nav__item--nested">
@@ -2673,6 +2863,9 @@
     
     
     
+      
+      
+    
     
     <li class="md-nav__item md-nav__item--nested">
       
@@ -2876,6 +3069,9 @@
     
     
     
+      
+      
+    
     
     <li class="md-nav__item md-nav__item--nested">
       
@@ -3043,6 +3239,9 @@
       
     
     
+    
+      
+      
     
     
     <li class="md-nav__item md-nav__item--nested">
@@ -3547,6 +3746,17 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#worker-administration" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Worker administration
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#byte-compatibility-and-frozen-fixtures" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -3683,7 +3893,7 @@ constitution forbids.</p>
 </tr>
 <tr>
 <td>An environment fingerprint mismatch</td>
-<td>See <a href="#environment-fingerprint">environment fingerprint</a>. Compared when a worker process is ADMITTED, against the dispatcher's current build; a run's recorded fingerprint is not re-checked on resume (#203).</td>
+<td>See <a href="#environment-fingerprint">environment fingerprint</a>. Compared when a worker process is ADMITTED, against the dispatcher's current build; on resume a run's recorded fingerprint is compared with the current one and a difference is reported, never refused (AD6).</td>
 </tr>
 </tbody>
 </table>
@@ -3744,11 +3954,23 @@ third axis and folds into neither.</p>
 </tr>
 <tr>
 <td>Admission</td>
-<td>The handshake that authenticates a worker process against the run's shared key and then checks that it runs the same build and resolves the same components. It happens before that worker can claim anything.</td>
+<td>The handshake that authenticates a worker process against the run's shared key, checks that an operator-named worker is enrolled and trusted and that its declared capabilities meet the run's requirements, and then checks that it runs the same build and resolves the same components. It happens before that worker can claim anything.</td>
 </tr>
 <tr>
 <td>Reattachment</td>
 <td>A worker reconnecting under its own identity and resending the result nobody acknowledged. It preserves ACCEPTANCES, not work: a lease is rebound only inside the epoch that issued it and only while its old connection is still registered, and any other resend is answered <code>Duplicate</code> or <code>Stale</code> from the store.</td>
+</tr>
+<tr>
+<td>Enrolment</td>
+<td>An operator's entry for a worker id in the store's allow-list, made with <code>workers add</code> and holding the capabilities that worker declares. A dispatcher's own minted ids need none.</td>
+</tr>
+<tr>
+<td>Revocation</td>
+<td>An operator's withdrawal of a worker's trust: its generation moves on by one and its row is marked revoked. It is installation-wide, reaching every run in the store, and a lease issued at the old generation is stale at the next transactional check.</td>
+</tr>
+<tr>
+<td>Capability match</td>
+<td>At admission, every key in the union of the run's component <code>work_requirements</code> must be declared by the worker at a value with the same canonical bytes. Extra keys are allowed.</td>
 </tr>
 <tr>
 <td>Executor</td>
@@ -3780,7 +4002,7 @@ third axis and folds into neither.</p>
 </tr>
 <tr>
 <td>Stale reason</td>
-<td>The one precondition a stale submission failed, from a closed set: not leased, ended, superseded attempt, other worker, stale generation, unproven token, prior epoch, expired. Expiry is recognised even after it has been swept, from the token verifier the row keeps, so a lease that ran past its deadline reads expired either way. When several hold, terminal rows are checked first, then the epoch, then the row's lease.</td>
+<td>The one precondition a stale submission failed, from a closed set: not leased, ended, superseded attempt, other worker, stale generation, unproven token, prior epoch, expired. Expiry is recognised even after it has been swept, from the token verifier the row keeps, so a lease that ran past its deadline reads expired either way. When several hold, terminal rows are checked first, then the epoch, then the worker's current generation, then the row's lease.</td>
 </tr>
 <tr>
 <td>Submission status</td>
@@ -3947,7 +4169,16 @@ by name.</p>
 run, and no lease secret, crosses before its peer has proved it holds the
 shared key: each authenticated frame is an opaque body and a MAC over exactly
 the bytes sent, verified before the body is parsed, carrying the message's
-kind, its version and both connection nonces. A worker is then admitted only
+kind, its version and both connection nonces. An operator-named worker is then
+admitted only by a TRUSTED row in the store the run lives in. That row is read
+at the <code>Hello</code>, BEFORE the build is compared and before any of the run's record
+crosses, so a key-holder nobody enrolled learns nothing about this run -- not
+even whether its build matched -- and it is read again just before the
+reservation, because an operator can revoke while a worker is building its
+executors. The registration a worker is admitted under carries the generation of
+that second read. A dispatcher's own minted ids have no row, cannot be revoked,
+and are admitted at generation 1 without consulting the allow-list at all. A
+worker is admitted only
 if it declares the dispatcher's current build and the components the run
 recorded; it builds those from the RECORDED start it is sent, never from its
 own module's declaration, so neither a budget override nor a drifted task can
@@ -3955,6 +4186,10 @@ change what it runs. A refusal it can verify is terminal; one it cannot is
 advisory, and it reconnects. Every worker process holds one lease at a time.</p>
 <p>Malformed MACs and bodies that cannot encode as UTF-8 refuse only their
 connection. MAC format validation and comparison precede body decoding.
+Worker nonces must be 64 hexadecimal characters, matching the workers' minted
+format, so JSON escaping cannot enlarge Terms beyond its preflight size. The
+listener retains only its latest 16 refusals, including unexpected exceptions
+and their tracebacks; older connections and their input buffers can be collected.
 Final admission rechecks and
 reserves worker identity before another pending handshake can accept that ID;
 a distinct live incarnation is refused, while a same-incarnation reconnect
@@ -4192,6 +4427,12 @@ a contract violation.</p>
 <td><code>LEASED</code></td>
 <td>expire</td>
 <td>At or past the deadline</td>
+<td><code>READY</code></td>
+</tr>
+<tr>
+<td><code>LEASED</code></td>
+<td>sweep a revoked worker</td>
+<td>The store no longer honours the generation the lease was issued at; weighed before the deadline, and the withdrawn credential and the <code>WorkerRevoked</code> cause are written with it</td>
 <td><code>READY</code></td>
 </tr>
 <tr>
@@ -4806,13 +5047,14 @@ supplied registry. Context, experience, budget and codec are read from the
 committed start and cannot change, so their resume-side refusals are
 store-tampering backstops rather than admission re-checks; the codec row is
 enforced by <code>check_declared_codec</code> on every reader's path.</p>
-<p><strong>Six of the seven are enforced, and the seventh is a different KIND of rule.</strong>
-The fingerprint row is recorded and not compared — see
-<a href="#environment-fingerprint">environment fingerprint</a> — and it could not be
-compared at start or at resume even once that lands, because a worker's
+<p><strong>Six of the seven are enforced at start, and the seventh is a different KIND
+of rule.</strong> The fingerprint row cannot refuse at start, because a worker's
 fingerprint is not part of the run declaration and no worker exists yet. It is
-the one refusal that fires when a worker IS ADMITTED, before it can claim, and it refuses the
-worker rather than the run.</p>
+the one refusal that fires when a worker IS ADMITTED, before it can claim,
+against the dispatcher's current build, and it refuses the worker rather than
+the run. On resume the recorded value is compared with the current one and a
+difference is reported, never refused — see
+<a href="#environment-fingerprint">environment fingerprint</a>.</p>
 <p><strong><code>resumable</code> means the run recorded enough identity to resume, not that it
 replays identically.</strong> For <code>durable-local</code> the two coincide, because its
 components are deterministic by admission. A distributed run may carry a
@@ -4862,14 +5104,16 @@ already states, made explicit at the flag that would otherwise imply more.</p>
 <tr>
 <td>An environment fingerprint mismatch</td>
 <td>Not at start: a worker's fingerprint is not in the run declaration and no worker exists yet</td>
-<td>Not at resume either. This one is checked when a WORKER IS ADMITTED, before it can claim, against the dispatcher's current build, and refuses the worker rather than the run</td>
+<td>Compared with the current build and reported, never refused (AD6). The refusal is when a WORKER IS ADMITTED, before it can claim, against the dispatcher's current build, and it refuses the worker rather than the run</td>
 </tr>
 </tbody>
 </table>
 <p>Resume is the strictly harder direction: a run admitted under a conforming
 program can be resumed with a program that no longer declares the capability, or
-in an environment that has drifted since, and neither is visible from committed
-history alone.</p>
+in an environment that has drifted since. The first is not visible from
+committed history alone, which is why the capability is re-read from the
+re-supplied program; the second is visible, from the recorded fingerprint, and
+is reported rather than refused.</p>
 <h2 id="determinism">Determinism<a class="headerlink" href="#determinism" title="Permanent link">&para;</a></h2>
 <p>Ranking keeps score primary: evaluations are pre-ordered by their producing
 trial's logical step, then stably sorted by score, with the evaluation id as a
@@ -4919,30 +5163,165 @@ part of handing out a lease, so neither broker's <code>acquire</code> reads
 is informational.</p>
 <p>M11.4's durable worker table makes the admitting authority durable; it does not
 move where the comparison happens.</p>
-<p><strong>A RESUME-TIME comparison is a different question, and it remains deferred for
-a different reason.</strong> M11.3 compares a worker against the build it is about to
-serve, which is a same-build check with one honest answer. Whether a RUN may
-resume on a build that has moved is a policy question, not an authority one.
-On resume both values are already in hand — the recorded
-fingerprint on <code>RunCapabilities</code>, and the current one from
-<code>environment_fingerprint()</code> — so nothing about worker-table authority blocks
-comparing them. What blocks it is what the digest covers: the installed
-meta-evolve SOURCE and every installed distribution. Measured: changing the
-source digest, adding one unrelated package, or a patch-level Python bump each
-move the fingerprint. A strict resume-time comparison would therefore refuse
-every legitimate resume across a code change or a <code>uv sync</code> — which in this
-repository is the ordinary case, not the exception, since evolving the source is
-the point.</p>
-<p>So the open question is not authority but POLICY: which dimensions must match
-for a resume to be safe. Platform and interpreter plausibly must; the source
-digest plausibly must not, or the flag means "resume only the exact build that
-started this run". Whoever implements #203 should decide that before writing a
-comparison, rather than discovering it from a refused resume.</p>
+<p><strong>On resume a changed environment is reported, never refused (AD6).</strong> M11.3
+compares a worker against the build it is about to serve, which is a same-build
+check with one honest answer. Whether a RUN may resume on a build that has moved
+was left open as a policy question, and it is closed here. On resume both values
+are in hand — the recorded fingerprint on <code>RunCapabilities</code>, and the current one
+from <code>environment_fingerprint()</code> — and what decides the policy is what the
+digest covers: the installed meta-evolve SOURCE and every installed
+distribution. Measured: changing the source digest, adding one unrelated
+package, or a patch-level Python bump each move the fingerprint. A strict
+resume-time comparison would therefore refuse every legitimate resume across a
+code change or a <code>uv sync</code> — which in this repository is the ordinary case, not
+the exception, since evolving the source is the point — and a single digest
+over every input cannot express a rule about which input may move.</p>
+<p>So a resume computes the recorded value against the current one and reports a
+difference: <code>Run.environment_drift()</code> answers it, and <code>meta-evolve resume</code>
+prints one extra row, "environment changed since start", naming both digests
+and not the input that moved, only when there is drift, so every other resume
+prints what it always has. The property that matters — every worker in one
+drive runs the dispatcher's build — is enforced at each admission, against the
+resuming dispatcher's current fingerprint.</p>
 <p>It is a <strong>version-set fingerprint, not environment identity</strong>. Name and version
 pairs do not identify installed bytes, so two editable or locally patched
 installs can match, and the platform string omits OS release and libc ABI. It
 reliably detects drift; it does not prove sameness. Content-hashed distributions
 are the exit.</p>
+<h2 id="worker-administration">Worker administration<a class="headerlink" href="#worker-administration" title="Permanent link">&para;</a></h2>
+<p>An operator decides which external workers a store trusts and what each
+declares it can do, and can withdraw that trust while a run is live. The
+<a href="../worker-administration-plan/">plan</a> resolves the decision labels AD1–AD7 and
+PD1–PD8 this section cites; the
+<a href="../../guides/cli/#worker-processes">command-line guide</a> owns the commands.</p>
+<p><strong>The allow-list belongs to the store, not to a run.</strong> It is one validated
+table, <code>trusted_workers</code>, with no run id: one row per operator-named worker,
+holding its generation, its status and the capabilities its operator declared.
+Only an operator writes it, through <code>meta-evolve workers add</code> and <code>revoke</code>; the
+dispatcher and the transport read it and never write it, and a dispatcher's own
+minted ids have no row at all — generation 1, not revocable, stopped by stopping
+their dispatcher (AD3). Rows are never deleted, so a worker's generation is
+monotonic for the life of the store, and enrolling a revoked id again trusts it
+at the generation its revoke reached (AD2).</p>
+<p>Every mismatch between a worker and the run it asks to serve is refused before
+that worker holds a lease:</p>
+<table>
+<thead>
+<tr>
+<th>Mismatch</th>
+<th>Refused at</th>
+<th>Before a lease because</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Unenrolled id</td>
+<td><code>Hello</code></td>
+<td>The allow-list is read after the MAC and the id rules and before the build comparison or <code>Terms</code>, so a key-holder nobody enrolled learns nothing about the run. Authenticated and terminal: the worker exits, told the command that would enrol it.</td>
+</tr>
+<tr>
+<td>Revoked</td>
+<td><code>Hello</code>, final admission, <code>acquire</code></td>
+<td>Read again just before the reservation, so a revoke landing while a worker builds its executors is caught; a worker admitted before its revoke is refused at its next claim, inside the acquiring transaction and after the epoch fence, with <code>WorkerNotTrusted</code> rather than a lease.</td>
+</tr>
+<tr>
+<td>Capability</td>
+<td><code>Hello</code>, final admission</td>
+<td>Answered by the same row as the trust, at both reads, against the union of the run's component <code>work_requirements</code> computed once when the host opens. A missing key is refused naming the key and the value required; a value whose canonical bytes differ, naming the key and both values.</td>
+</tr>
+<tr>
+<td>Environment</td>
+<td><code>Hello</code></td>
+<td>The declared fingerprint is compared against the dispatcher's CURRENT build: see <a href="#environment-fingerprint">environment fingerprint</a>.</td>
+</tr>
+<tr>
+<td>Manifest</td>
+<td><code>Manifests</code></td>
+<td><code>verify_manifests</code> compares the components the worker resolved with the ones the run recorded, before the reservation.</td>
+</tr>
+<tr>
+<td>Codec</td>
+<td>Closed structurally at start and resume</td>
+<td>A custom codec is one of the seven distributed-start refusals and is refused again on resume, so no worker can meet a codec other than the one every process shares.</td>
+</tr>
+<tr>
+<td>Capacity</td>
+<td>Protocol-fixed at one, enforced inside the acquiring transaction</td>
+<td>Every registration carries one lease, and <code>acquire</code> counts the worker's leased rows inside the transaction that would add another.</td>
+</tr>
+<tr>
+<td>Conflicting requirements</td>
+<td><code>WorkerHost.open()</code>, before the rollover</td>
+<td>Two components requiring one key at different values can be satisfied by no declaration, and every admitted worker runs every item, so the listening host raises <code>CapabilityError</code> with every row ready, no attempt spent and the epoch unchanged (PD6).</td>
+</tr>
+</tbody>
+</table>
+<p>The listening host obtains the store's enrolment reader when it opens. A store
+without that capability raises <code>CapabilityError</code> before any key, listener, or
+epoch change. The reader remains live for both admission checks; spawned
+backends leave the reader factory unused.</p>
+<p><strong>A revoke is installation-wide.</strong> It moves the worker's generation on by one
+and marks its row, and the registry holds one row per worker for the whole
+store, so every live lease that worker holds in every run in the store is
+stale at that run's next transactional check: renewal, submission status,
+release and acceptance all answer <code>STALE_GENERATION</code>, which the closed set
+already held (AD5). The same run's next broker write sweeps the lease back to
+ready, clears its verifier and records the attempt's cause as <code>WorkerRevoked</code>,
+with the attempt still spent, because the worker did start it (PD3). The
+adapter writes the cause, so it survives a dead dispatcher. An item revoked out
+of every attempt ends cancelled as an <code>InfrastructureFailure</code> whose
+<code>exception_type</code> is <code>WorkerRevoked</code>: a cause on a row, never an exception on the
+wire, so the closed wire error map is unchanged. The revoked worker, answered
+stale, has its connection failed, meets the door's authenticated refusal when it
+reconnects, and exits.</p>
+<p><strong>An idle revoked worker stays connected until work appears or the run ends.</strong>
+A revoke reaches a worker through a store transaction, and a worker holding
+nothing makes none. Its next claim is refused and its connection failed, with
+no attempt spent; if no work appears first, it hears the run finish and exits.
+It never holds a lease after revocation, so the
+guarantee that a revoked worker's leases die at the next transactional check is
+unaffected.</p>
+<p><strong>An older process holding a store open across the upgrade is stopped at its
+next <code>work_items</code> write.</strong> The store's schema version is checked only when a
+store is opened, so a dispatcher that opened a schema-4 store before a newer
+command line migrated it to 5 would still hold it, with the old code in memory,
+and could go on leasing to a worker revoked after the upgrade. Schema 5
+therefore guards <code>work_items</code> with a <code>BEFORE INSERT</code> and a <code>BEFORE UPDATE</code>
+trigger whose body calls a function only a schema-5 open registers. Once the
+migration commits, the older connection cannot write that table; every
+lease-bearing write touches it, so its next broker transaction fails whole as a
+typed <code>DurableStoreError</code> while its reads still answer, and the run resumes on
+the new build (AD1).</p>
+<p><strong>A damaged trust row stops the runs its worker holds a lease in.</strong> A row the
+decode refuses is <code>DurableCorruption</code>, never skipped: skipped as absent it
+would free a lease nobody revoked, and skipped as trusted it would honour an
+authority nothing can read. The sweep that opens each of a run's broker writes
+reads the row of every worker holding one of that run's leases, so while the
+damaged worker holds one, every write in that run stops until the row is
+repaired, and so does anything that looks the worker up by name: its claims,
+the door and <code>workers list</code>. A run where it holds nothing never reads the row
+and keeps writing.</p>
+<p><strong>Spawned and inline runs never match <code>work_requirements</code> against a worker.</strong>
+A spawn-policy host carries no requirements, and an inline run has no worker.
+The field's only other reader is <code>verify_manifests</code>, an equality comparison —
+host against worker at a handshake, recorded against supplied on every resume —
+so two components declaring one key at different values stay valid inline and
+under <code>--workers N</code>, and only a listening host refuses them.</p>
+<p><strong>Workers mint no trial, artifact, evaluation, event or usage-count identity.</strong>
+Every id a run records is derived host-side from committed facts, a worker's
+payload carries none, and the trial and evaluation counts a worker reports are
+stripped before its usage is recorded, so a worker answering that it spent 99
+trials records the one the host counts. A result
+for another connection's lease, or for an item the run does not hold, fails its
+sender's connection and commits nothing. <code>tests/test_workers_mint_no_identity.py</code>
+holds the evidence. Not claimed: that no id type crosses the wire — ids
+legitimately travel host to worker inside the work it is sent.</p>
+<p><strong>Deferred.</strong> Per-kind routing, meaning a worker that serves only evaluations:
+every admitted worker runs every item. Multi-call worker processes, meaning a
+capacity above one: the protocol fixes it at one, and the record rejects a
+capacity field whose only legal value is one. Respawn: a dead worker is not
+replaced, and a run whose spawned workers have all died is refused by name so
+that resuming it stays the operator's decision.</p>
 <h2 id="byte-compatibility-and-frozen-fixtures">Byte compatibility and frozen fixtures<a class="headerlink" href="#byte-compatibility-and-frozen-fixtures" title="Permanent link">&para;</a></h2>
 <p>M11.1 changes durable folds while leaving every recorded byte where it is, so the
 anchors that would catch a regression are named here, before the first code slice
@@ -5014,7 +5393,10 @@ on a worker; acceptance is at most once. A worker process is admitted by a
 mutually authenticated handshake against the dispatcher's current build before
 it can claim. Spawned workers finish admission before the epoch rolls over;
 external workers join during the drive. Reattachment preserves acceptances,
-not work.</p>
+not work. An operator-named worker is admitted only by a trusted row in the
+store its run lives in, and only if its declared capabilities meet the run's
+requirements as a whole; a revoke moves its generation on and reaches every run
+in that store. A resume in a changed environment is reported, never refused.</p>
 <h2 id="deferred-and-rejected">Deferred and rejected<a class="headerlink" href="#deferred-and-rejected" title="Permanent link">&para;</a></h2>
 <p><strong>Deferred.</strong> Steady-state refill, which admits new work while earlier work is
 outstanding: it does strictly more than cohorts, is not asked for by #10, and
@@ -5025,9 +5407,11 @@ and an endpoint carrying an operation ordinal with attempt and resolution
 appended atomically. Concurrency for further presets, each behind proved
 pending-work semantics. Paid concurrency, behind conservative per-trial
 allocation.</p>
-<p>Replacing a worker that died, and a worker capacity above one, both belong with
-worker administration (#203, #204): a run whose spawned workers have all died
-is refused by name so that resuming it is the operator's decision. Killing the
+<p>Replacing a worker that died, a worker capacity above one, and per-kind
+routing all stay out of <a href="#worker-administration">worker administration</a>, which
+enrols, matches and revokes and replaces nothing: a run whose spawned workers
+have all died is refused by name so that resuming it is the operator's
+decision. Killing the
 sessions a component started for itself, after its worker is killed outright,
 needs a process-wide registry of them for a watchdog to read — which is the
 hidden global state the constitution rules out — and the gap is the one a
@@ -5123,7 +5507,7 @@ epoch.</p>
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["content.action.edit", "content.action.view", "content.code.annotate", "content.code.copy", "content.tabs.link", "navigation.footer", "navigation.indexes", "navigation.instant", "navigation.instant.progress", "navigation.path", "navigation.top", "navigation.tracking", "search.highlight", "search.share", "search.suggest", "toc.follow"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["content.action.edit", "content.action.view", "content.code.annotate", "content.code.copy", "content.tabs.link", "navigation.footer", "navigation.indexes", "navigation.instant", "navigation.instant.progress", "navigation.path", "navigation.tabs", "navigation.top", "navigation.tracking", "search.highlight", "search.share", "search.suggest", "toc.follow"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
       <script src="../../assets/javascripts/bundle.d7400e89.min.js"></script>

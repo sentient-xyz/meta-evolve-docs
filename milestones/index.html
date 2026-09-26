@@ -48,16 +48,22 @@
         
         
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Figtree:300,300i,400,400i,700,700i%7CIBM+Plex+Mono:400,400i,700,700i&display=fallback">
-        <style>:root{--md-text-font:"Figtree";--md-code-font:"IBM Plex Mono"}</style>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Hanken+Grotesk:300,300i,400,400i,700,700i%7CIBM+Plex+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Hanken Grotesk";--md-code-font:"IBM Plex Mono"}</style>
       
     
     
       <link rel="stylesheet" href="../assets/_mkdocstrings.css">
     
+      <link rel="stylesheet" href="../stylesheets/tokens.css">
+    
       <link rel="stylesheet" href="../stylesheets/extra.css">
     
+      <link rel="stylesheet" href="../stylesheets/chrome.css">
+    
       <link rel="stylesheet" href="../stylesheets/home.css">
+    
+      <link rel="stylesheet" href="../stylesheets/loop.css">
     
     <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
@@ -67,6 +73,8 @@
     
   
   <meta name="color-scheme" content="light dark">
+  
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,300..700;1,400..700&display=fallback">
 
   </head>
   
@@ -99,13 +107,12 @@
     
       
 
-  
-
-<header class="md-header md-header--shadow" data-md-component="header">
+<header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
     <a href=".." title="Meta-Evolve" class="md-header__button md-logo" aria-label="Meta-Evolve" data-md-component="logo">
       
-  <img src="../assets/logo.svg" alt="logo">
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 3.5 21 19.5H3z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M12 10 15.4 16H8.6z" fill="#b8975a"/></svg>
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -239,6 +246,149 @@
       
         
           
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href=".." class="md-tabs__link">
+          
+  
+  
+    
+  
+  Start
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../guides/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Guides
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../examples/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Examples
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../concepts/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Concepts
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../reference/components/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Reference
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../project/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Development
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
         
       
       <main class="md-main" data-md-component="main">
@@ -252,12 +402,15 @@
                     
 
 
+  
 
-<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
     <a href=".." title="Meta-Evolve" class="md-nav__button md-logo" aria-label="Meta-Evolve" data-md-component="logo">
       
-  <img src="../assets/logo.svg" alt="logo">
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 3.5 21 19.5H3z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M12 10 15.4 16H8.6z" fill="#b8975a"/></svg>
 
     </a>
     Meta-Evolve
@@ -294,6 +447,9 @@
       
     
     
+    
+      
+      
     
     
     <li class="md-nav__item md-nav__item--nested">
@@ -409,6 +565,9 @@
       
     
     
+    
+      
+      
     
     
     <li class="md-nav__item md-nav__item--nested">
@@ -668,6 +827,9 @@
     
     
     
+      
+      
+    
     
     <li class="md-nav__item md-nav__item--nested">
       
@@ -784,6 +946,9 @@
       
     
     
+    
+      
+      
     
     
     <li class="md-nav__item md-nav__item--nested">
@@ -915,6 +1080,9 @@
     
     
     
+      
+      
+    
     
     <li class="md-nav__item md-nav__item--nested">
       
@@ -1003,6 +1171,9 @@
       
     
     
+    
+      
+      
     
     
     <li class="md-nav__item md-nav__item--nested">
@@ -1239,6 +1410,9 @@
     
     
     
+      
+      
+    
     
     <li class="md-nav__item md-nav__item--nested">
       
@@ -1449,6 +1623,9 @@
       
     
     
+    
+      
+      
     
     
     <li class="md-nav__item md-nav__item--nested">
@@ -1711,6 +1888,9 @@
     
     
     
+      
+      
+    
     
     <li class="md-nav__item md-nav__item--nested">
       
@@ -1908,6 +2088,9 @@
       
     
     
+    
+      
+      
     
     
     <li class="md-nav__item md-nav__item--nested">
@@ -2167,6 +2350,9 @@
     
     
     
+      
+      
+    
     
     <li class="md-nav__item md-nav__item--nested">
       
@@ -2285,6 +2471,9 @@
       
     
     
+    
+      
+      
     
     
     <li class="md-nav__item md-nav__item--nested">
@@ -2449,6 +2638,9 @@
       
     
     
+    
+      
+      
     
     
     <li class="md-nav__item md-nav__item--nested">
@@ -2677,6 +2869,9 @@
     
     
     
+      
+      
+    
     
     <li class="md-nav__item md-nav__item--nested">
       
@@ -2880,6 +3075,9 @@
     
     
     
+      
+      
+    
     
     <li class="md-nav__item md-nav__item--nested">
       
@@ -3050,8 +3248,14 @@
     
     
     
+      
+        
+        
+      
+      
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
         
         
@@ -3077,7 +3281,7 @@
             </a>
             
               
-              <label class="md-nav__link " for="__nav_6" id="__nav_6_label" tabindex="0">
+              <label class="md-nav__link " for="__nav_6" id="__nav_6_label" tabindex="">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
@@ -4599,13 +4803,16 @@ no placeholder example tree or speculative runtime protocol before its gate.</p>
 <a href="https://github.com/sentient-xyz/meta-evolve/issues/10">#10</a>. M11.0–M11.2 are
 <strong>Shipped</strong>: the design, concurrency-ready fold, durable work broker, dispatcher,
 and generational cohorts. M11.3 is <strong>Shipped</strong> with opt-in worker processes; distributed mode
-without a process backend still executes one call at a time. Administration,
-load validation, and the canonical demonstration remain below. The
+without a process backend still executes one call at a time. M11.4 is <strong>Shipped</strong>:
+an operator enrols, matches and revokes the workers a store trusts. Load
+validation and the canonical demonstration remain below. The
 <a href="../programming-model/#execution-profiles">programming model</a> owns backend
 selection; the <a href="../design/m11-trusted-concurrency/">M11 design</a>
 owns the detailed consistency model, work state machine, and compatibility rules.
 The <a href="../project/worker-processes-verification/">worker-process verification record</a>
-separates the stabilization baseline from final stack integration evidence.</p>
+separates the stabilization baseline from final stack integration evidence; the
+<a href="../project/worker-administration-verification/">worker-administration record</a>
+retains M11.4's.</p>
 <h3 id="concurrency-scope">Concurrency scope<a class="headerlink" href="#concurrency-scope" title="Permanent link">&para;</a></h3>
 <p>Admit only search policies declaring the cohort capability and passing its
 conformance suite; <code>BestOfN</code> is the only shipped example. Experiments declare
@@ -4641,8 +4848,8 @@ checked when a worker is ADMITTED, and refuses that worker rather than the run.<
 <td>Cross-process claiming, worker submission returning Duplicate or Stale, and the deterministic-abort split: a resumed run reads the cause already recorded for the row's current attempt at the completion stage, ends the item on a deterministic one, and re-runs a transient one until the retry bound ends it. No poison flag and no new state.</td>
 </tr>
 <tr>
-<td><a href="https://github.com/sentient-xyz/meta-evolve/issues/203">M11.4 / #203</a></td>
-<td>Trusted-worker administration, capability and capacity matching.</td>
+<td><a href="https://github.com/sentient-xyz/meta-evolve/issues/203">M11.4 / #203</a> — Shipped</td>
+<td>Trusted-worker administration: operator enrolment and revocation, and capability matching at admission; capacity stays fixed at one call per worker process.</td>
 </tr>
 <tr>
 <td><a href="https://github.com/sentient-xyz/meta-evolve/issues/204">M11.5 / #204</a></td>
@@ -5096,7 +5303,7 @@ future milestones are direction, not permission to pre-create their package tree
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["content.action.edit", "content.action.view", "content.code.annotate", "content.code.copy", "content.tabs.link", "navigation.footer", "navigation.indexes", "navigation.instant", "navigation.instant.progress", "navigation.path", "navigation.top", "navigation.tracking", "search.highlight", "search.share", "search.suggest", "toc.follow"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["content.action.edit", "content.action.view", "content.code.annotate", "content.code.copy", "content.tabs.link", "navigation.footer", "navigation.indexes", "navigation.instant", "navigation.instant.progress", "navigation.path", "navigation.tabs", "navigation.top", "navigation.tracking", "search.highlight", "search.share", "search.suggest", "toc.follow"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
       <script src="../assets/javascripts/bundle.d7400e89.min.js"></script>

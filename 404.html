@@ -42,16 +42,22 @@
         
         
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Figtree:300,300i,400,400i,700,700i%7CIBM+Plex+Mono:400,400i,700,700i&display=fallback">
-        <style>:root{--md-text-font:"Figtree";--md-code-font:"IBM Plex Mono"}</style>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Hanken+Grotesk:300,300i,400,400i,700,700i%7CIBM+Plex+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Hanken Grotesk";--md-code-font:"IBM Plex Mono"}</style>
       
     
     
       <link rel="stylesheet" href="/meta-evolve-docs/assets/_mkdocstrings.css">
     
+      <link rel="stylesheet" href="/meta-evolve-docs/stylesheets/tokens.css">
+    
       <link rel="stylesheet" href="/meta-evolve-docs/stylesheets/extra.css">
     
+      <link rel="stylesheet" href="/meta-evolve-docs/stylesheets/chrome.css">
+    
       <link rel="stylesheet" href="/meta-evolve-docs/stylesheets/home.css">
+    
+      <link rel="stylesheet" href="/meta-evolve-docs/stylesheets/loop.css">
     
     <script>__md_scope=new URL("/meta-evolve-docs/",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
@@ -61,6 +67,8 @@
     
   
   <meta name="color-scheme" content="light dark">
+  
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,300..700;1,400..700&display=fallback">
 
   </head>
   
@@ -88,13 +96,12 @@
     
       
 
-  
-
-<header class="md-header md-header--shadow" data-md-component="header">
+<header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
     <a href="/meta-evolve-docs/." title="Meta-Evolve" class="md-header__button md-logo" aria-label="Meta-Evolve" data-md-component="logo">
       
-  <img src="/meta-evolve-docs/assets/logo.svg" alt="logo">
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 3.5 21 19.5H3z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M12 10 15.4 16H8.6z" fill="#b8975a"/></svg>
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -228,6 +235,147 @@
       
         
           
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="/meta-evolve-docs/." class="md-tabs__link">
+          
+  
+  
+    
+  
+  Start
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="/meta-evolve-docs/guides/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Guides
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="/meta-evolve-docs/examples/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Examples
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="/meta-evolve-docs/concepts/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Concepts
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="/meta-evolve-docs/reference/components/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Reference
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="/meta-evolve-docs/project/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Development
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
         
       
       <main class="md-main" data-md-component="main">
@@ -241,12 +389,15 @@
                     
 
 
+  
 
-<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
     <a href="/meta-evolve-docs/." title="Meta-Evolve" class="md-nav__button md-logo" aria-label="Meta-Evolve" data-md-component="logo">
       
-  <img src="/meta-evolve-docs/assets/logo.svg" alt="logo">
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 3.5 21 19.5H3z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M12 10 15.4 16H8.6z" fill="#b8975a"/></svg>
 
     </a>
     Meta-Evolve
@@ -283,6 +434,9 @@
       
     
     
+    
+      
+      
     
     
     <li class="md-nav__item md-nav__item--nested">
@@ -398,6 +552,9 @@
       
     
     
+    
+      
+      
     
     
     <li class="md-nav__item md-nav__item--nested">
@@ -657,6 +814,9 @@
     
     
     
+      
+      
+    
     
     <li class="md-nav__item md-nav__item--nested">
       
@@ -773,6 +933,9 @@
       
     
     
+    
+      
+      
     
     
     <li class="md-nav__item md-nav__item--nested">
@@ -904,6 +1067,9 @@
     
     
     
+      
+      
+    
     
     <li class="md-nav__item md-nav__item--nested">
       
@@ -992,6 +1158,9 @@
       
     
     
+    
+      
+      
     
     
     <li class="md-nav__item md-nav__item--nested">
@@ -1228,6 +1397,9 @@
     
     
     
+      
+      
+    
     
     <li class="md-nav__item md-nav__item--nested">
       
@@ -1438,6 +1610,9 @@
       
     
     
+    
+      
+      
     
     
     <li class="md-nav__item md-nav__item--nested">
@@ -1700,6 +1875,9 @@
     
     
     
+      
+      
+    
     
     <li class="md-nav__item md-nav__item--nested">
       
@@ -1897,6 +2075,9 @@
       
     
     
+    
+      
+      
     
     
     <li class="md-nav__item md-nav__item--nested">
@@ -2156,6 +2337,9 @@
     
     
     
+      
+      
+    
     
     <li class="md-nav__item md-nav__item--nested">
       
@@ -2274,6 +2458,9 @@
       
     
     
+    
+      
+      
     
     
     <li class="md-nav__item md-nav__item--nested">
@@ -2438,6 +2625,9 @@
       
     
     
+    
+      
+      
     
     
     <li class="md-nav__item md-nav__item--nested">
@@ -2666,6 +2856,9 @@
     
     
     
+      
+      
+    
     
     <li class="md-nav__item md-nav__item--nested">
       
@@ -2869,6 +3062,9 @@
     
     
     
+      
+      
+    
     
     <li class="md-nav__item md-nav__item--nested">
       
@@ -3036,6 +3232,9 @@
       
     
     
+    
+      
+      
     
     
     <li class="md-nav__item md-nav__item--nested">
@@ -3411,7 +3610,7 @@
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "/meta-evolve-docs/", "features": ["content.action.edit", "content.action.view", "content.code.annotate", "content.code.copy", "content.tabs.link", "navigation.footer", "navigation.indexes", "navigation.instant", "navigation.instant.progress", "navigation.path", "navigation.top", "navigation.tracking", "search.highlight", "search.share", "search.suggest", "toc.follow"], "search": "/meta-evolve-docs/assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "/meta-evolve-docs/", "features": ["content.action.edit", "content.action.view", "content.code.annotate", "content.code.copy", "content.tabs.link", "navigation.footer", "navigation.indexes", "navigation.instant", "navigation.instant.progress", "navigation.path", "navigation.tabs", "navigation.top", "navigation.tracking", "search.highlight", "search.share", "search.suggest", "toc.follow"], "search": "/meta-evolve-docs/assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
       <script src="/meta-evolve-docs/assets/javascripts/bundle.d7400e89.min.js"></script>

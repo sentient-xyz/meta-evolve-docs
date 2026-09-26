@@ -48,16 +48,22 @@
         
         
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Figtree:300,300i,400,400i,700,700i%7CIBM+Plex+Mono:400,400i,700,700i&display=fallback">
-        <style>:root{--md-text-font:"Figtree";--md-code-font:"IBM Plex Mono"}</style>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Hanken+Grotesk:300,300i,400,400i,700,700i%7CIBM+Plex+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Hanken Grotesk";--md-code-font:"IBM Plex Mono"}</style>
       
     
     
       <link rel="stylesheet" href="../assets/_mkdocstrings.css">
     
+      <link rel="stylesheet" href="../stylesheets/tokens.css">
+    
       <link rel="stylesheet" href="../stylesheets/extra.css">
     
+      <link rel="stylesheet" href="../stylesheets/chrome.css">
+    
       <link rel="stylesheet" href="../stylesheets/home.css">
+    
+      <link rel="stylesheet" href="../stylesheets/loop.css">
     
     <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
@@ -67,6 +73,8 @@
     
   
   <meta name="color-scheme" content="light dark">
+  
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,300..700;1,400..700&display=fallback">
 
   </head>
   
@@ -99,13 +107,12 @@
     
       
 
-  
-
-<header class="md-header md-header--shadow" data-md-component="header">
+<header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
     <a href=".." title="Meta-Evolve" class="md-header__button md-logo" aria-label="Meta-Evolve" data-md-component="logo">
       
-  <img src="../assets/logo.svg" alt="logo">
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 3.5 21 19.5H3z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M12 10 15.4 16H8.6z" fill="#b8975a"/></svg>
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -239,6 +246,149 @@
       
         
           
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href=".." class="md-tabs__link">
+          
+  
+  
+    
+  
+  Start
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../guides/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Guides
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../examples/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Examples
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../concepts/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Concepts
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../reference/components/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Reference
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../project/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Development
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
         
       
       <main class="md-main" data-md-component="main">
@@ -252,12 +402,15 @@
                     
 
 
+  
 
-<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
     <a href=".." title="Meta-Evolve" class="md-nav__button md-logo" aria-label="Meta-Evolve" data-md-component="logo">
       
-  <img src="../assets/logo.svg" alt="logo">
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 3.5 21 19.5H3z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M12 10 15.4 16H8.6z" fill="#b8975a"/></svg>
 
     </a>
     Meta-Evolve
@@ -294,6 +447,9 @@
       
     
     
+    
+      
+      
     
     
     <li class="md-nav__item md-nav__item--nested">
@@ -409,6 +565,9 @@
       
     
     
+    
+      
+      
     
     
     <li class="md-nav__item md-nav__item--nested">
@@ -668,6 +827,9 @@
     
     
     
+      
+      
+    
     
     <li class="md-nav__item md-nav__item--nested">
       
@@ -784,6 +946,9 @@
       
     
     
+    
+      
+      
     
     
     <li class="md-nav__item md-nav__item--nested">
@@ -915,6 +1080,9 @@
     
     
     
+      
+      
+    
     
     <li class="md-nav__item md-nav__item--nested">
       
@@ -1003,6 +1171,9 @@
       
     
     
+    
+      
+      
     
     
     <li class="md-nav__item md-nav__item--nested">
@@ -1239,6 +1410,9 @@
     
     
     
+      
+      
+    
     
     <li class="md-nav__item md-nav__item--nested">
       
@@ -1449,6 +1623,9 @@
       
     
     
+    
+      
+      
     
     
     <li class="md-nav__item md-nav__item--nested">
@@ -1711,6 +1888,9 @@
     
     
     
+      
+      
+    
     
     <li class="md-nav__item md-nav__item--nested">
       
@@ -1908,6 +2088,9 @@
       
     
     
+    
+      
+      
     
     
     <li class="md-nav__item md-nav__item--nested">
@@ -2167,6 +2350,9 @@
     
     
     
+      
+      
+    
     
     <li class="md-nav__item md-nav__item--nested">
       
@@ -2285,6 +2471,9 @@
       
     
     
+    
+      
+      
     
     
     <li class="md-nav__item md-nav__item--nested">
@@ -2452,15 +2641,21 @@
     
     
     
+      
+        
+        
+      
+      
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
         
         
         <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" checked>
         
           
-          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
             
   
   
@@ -3162,6 +3357,9 @@
     
     
     
+      
+      
+    
     
     <li class="md-nav__item md-nav__item--nested">
       
@@ -3365,6 +3563,9 @@
     
     
     
+      
+      
+    
     
     <li class="md-nav__item md-nav__item--nested">
       
@@ -3532,6 +3733,9 @@
       
     
     
+    
+      
+      
     
     
     <li class="md-nav__item md-nav__item--nested">
@@ -4476,6 +4680,10 @@ methods does not advance search.</p>
 <td>Why did attempts succeed or fail?</td>
 <td><code>inspect()</code></td>
 </tr>
+<tr>
+<td>Has the environment changed since a distributed run started?</td>
+<td><code>environment_drift()</code></td>
+</tr>
 </tbody>
 </table>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="n">scores</span> <span class="o">=</span> <span class="p">[</span>
@@ -4490,6 +4698,13 @@ methods does not advance search.</p>
 <a id="__codelineno-5-10" name="__codelineno-5-10" href="#__codelineno-5-10"></a><span class="c1"># [&#39;33%&#39;, &#39;100%&#39;]</span>
 <a id="__codelineno-5-11" name="__codelineno-5-11" href="#__codelineno-5-11"></a><span class="c1"># 4m: 240</span>
 </code></pre></div>
+<p><code>environment_drift()</code> compares this process's environment fingerprint with
+the one a distributed run recorded at start. It returns <code>None</code> when they match
+or when the run recorded none, and otherwise an <code>EnvironmentDrift</code> holding both
+digests, whose <code>str()</code> is one sentence. The fingerprint is one digest, so the
+answer says that the environment changed, never which part. Drift never
+refuses a resume: each worker is checked against the resuming dispatcher's
+build when it is admitted.</p>
 <p>These are the same measured results as the original <code>improve()</code> call and the
 expanded <code>run()</code> call. Failed attempts remain inspectable; when no evaluation
 succeeds, <code>best()</code> raises <code>NoSuccessfulEvaluation</code>. Use
@@ -4816,7 +5031,16 @@ Persisting a local run keeps history; it does not make its callables resumable.
 <code>step()</code>. Select worker processes explicitly: <code>drive(execution=WorkerProcesses(n,
 module))</code> spawns them for this run, and <code>drive(execution=WorkerHost(address,
 key_file))</code> accepts workers an operator starts, each admitted by a handshake
-that proves a shared key and the same build. Malformed MACs refuse their connection;
+that proves a shared key and the same build. Only the listening profile takes an
+allow-list: a worker an operator names is admitted only while the store trusts
+that id, so enrol it (<code>meta-evolve workers add ID --storage PATH</code>) before
+starting it, and withdrawing that trust frees whatever it holds. It is admitted
+only if the capabilities it was enrolled with (<code>--capability KEY=VALUE</code>) satisfy
+every component's <code>work_requirements</code>, since every admitted worker runs every
+item. The listening host requires a storage enrolment reader before creating
+its key, binding its port, or rolling the dispatcher epoch. Inline execution
+and spawned workers need no enrolment, since those
+identities are the dispatcher's own. Malformed MACs and nonces refuse their connection;
 admission prevents distinct live processes from sharing a worker identity.
 An external worker retains an unanswered completed result across connection loss
 and resubmits it for a store-authoritative answer. Without <code>execution=</code> the work runs
@@ -5084,7 +5308,7 @@ on <code>improve()</code> would require a separate decision about its interactio
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["content.action.edit", "content.action.view", "content.code.annotate", "content.code.copy", "content.tabs.link", "navigation.footer", "navigation.indexes", "navigation.instant", "navigation.instant.progress", "navigation.path", "navigation.top", "navigation.tracking", "search.highlight", "search.share", "search.suggest", "toc.follow"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["content.action.edit", "content.action.view", "content.code.annotate", "content.code.copy", "content.tabs.link", "navigation.footer", "navigation.indexes", "navigation.instant", "navigation.instant.progress", "navigation.path", "navigation.tabs", "navigation.top", "navigation.tracking", "search.highlight", "search.share", "search.suggest", "toc.follow"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
       <script src="../assets/javascripts/bundle.d7400e89.min.js"></script>

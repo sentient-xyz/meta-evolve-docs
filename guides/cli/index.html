@@ -48,16 +48,22 @@
         
         
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Figtree:300,300i,400,400i,700,700i%7CIBM+Plex+Mono:400,400i,700,700i&display=fallback">
-        <style>:root{--md-text-font:"Figtree";--md-code-font:"IBM Plex Mono"}</style>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Hanken+Grotesk:300,300i,400,400i,700,700i%7CIBM+Plex+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Hanken Grotesk";--md-code-font:"IBM Plex Mono"}</style>
       
     
     
       <link rel="stylesheet" href="../../assets/_mkdocstrings.css">
     
+      <link rel="stylesheet" href="../../stylesheets/tokens.css">
+    
       <link rel="stylesheet" href="../../stylesheets/extra.css">
     
+      <link rel="stylesheet" href="../../stylesheets/chrome.css">
+    
       <link rel="stylesheet" href="../../stylesheets/home.css">
+    
+      <link rel="stylesheet" href="../../stylesheets/loop.css">
     
     <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
@@ -67,6 +73,8 @@
     
   
   <meta name="color-scheme" content="light dark">
+  
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,300..700;1,400..700&display=fallback">
 
   </head>
   
@@ -99,13 +107,12 @@
     
       
 
-  
-
-<header class="md-header md-header--shadow" data-md-component="header">
+<header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
     <a href="../.." title="Meta-Evolve" class="md-header__button md-logo" aria-label="Meta-Evolve" data-md-component="logo">
       
-  <img src="../../assets/logo.svg" alt="logo">
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 3.5 21 19.5H3z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M12 10 15.4 16H8.6z" fill="#b8975a"/></svg>
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -239,6 +246,149 @@
       
         
           
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../.." class="md-tabs__link">
+          
+  
+  
+    
+  
+  Start
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Guides
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../examples/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Examples
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../concepts/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Concepts
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../../reference/components/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Reference
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../project/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Development
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
         
       
       <main class="md-main" data-md-component="main">
@@ -252,12 +402,15 @@
                     
 
 
+  
 
-<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
     <a href="../.." title="Meta-Evolve" class="md-nav__button md-logo" aria-label="Meta-Evolve" data-md-component="logo">
       
-  <img src="../../assets/logo.svg" alt="logo">
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 3.5 21 19.5H3z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M12 10 15.4 16H8.6z" fill="#b8975a"/></svg>
 
     </a>
     Meta-Evolve
@@ -294,6 +447,9 @@
       
     
     
+    
+      
+      
     
     
     <li class="md-nav__item md-nav__item--nested">
@@ -409,6 +565,9 @@
       
     
     
+    
+      
+      
     
     
     <li class="md-nav__item md-nav__item--nested">
@@ -668,6 +827,9 @@
     
     
     
+      
+      
+    
     
     <li class="md-nav__item md-nav__item--nested">
       
@@ -784,6 +946,9 @@
       
     
     
+    
+      
+      
     
     
     <li class="md-nav__item md-nav__item--nested">
@@ -915,6 +1080,9 @@
     
     
     
+      
+      
+    
     
     <li class="md-nav__item md-nav__item--nested">
       
@@ -1003,6 +1171,9 @@
       
     
     
+    
+      
+      
     
     
     <li class="md-nav__item md-nav__item--nested">
@@ -1239,6 +1410,9 @@
     
     
     
+      
+      
+    
     
     <li class="md-nav__item md-nav__item--nested">
       
@@ -1449,6 +1623,9 @@
       
     
     
+    
+      
+      
     
     
     <li class="md-nav__item md-nav__item--nested">
@@ -1711,6 +1888,9 @@
     
     
     
+      
+      
+    
     
     <li class="md-nav__item md-nav__item--nested">
       
@@ -1908,6 +2088,9 @@
       
     
     
+    
+      
+      
     
     
     <li class="md-nav__item md-nav__item--nested">
@@ -2167,6 +2350,9 @@
     
     
     
+      
+      
+    
     
     <li class="md-nav__item md-nav__item--nested">
       
@@ -2285,6 +2471,9 @@
       
     
     
+    
+      
+      
     
     
     <li class="md-nav__item md-nav__item--nested">
@@ -2452,15 +2641,21 @@
     
     
     
+      
+        
+        
+      
+      
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
         
         
         <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" checked>
         
           
-          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
             
   
   
@@ -2679,6 +2874,9 @@
     
     
     
+      
+      
+    
     
     <li class="md-nav__item md-nav__item--nested">
       
@@ -2883,6 +3081,9 @@
       
     
     
+    
+      
+      
     
     
     <li class="md-nav__item md-nav__item--active md-nav__item--nested">
@@ -3175,6 +3376,9 @@
       
     
     
+    
+      
+      
     
     
     <li class="md-nav__item md-nav__item--nested">
@@ -3922,6 +4126,9 @@ durability contracts.</p>
 <a id="__codelineno-7-9" name="__codelineno-7-9" href="#__codelineno-7-9"></a>meta-evolve compare LEFT_RUN_ID RIGHT_RUN_ID --storage STORAGE
 <a id="__codelineno-7-10" name="__codelineno-7-10" href="#__codelineno-7-10"></a>meta-evolve ui --storage STORAGE [--port PORT] [--module MODULE]
 <a id="__codelineno-7-11" name="__codelineno-7-11" href="#__codelineno-7-11"></a>meta-evolve worker --module MODULE --connect ADDR --key-file PATH --worker-id ID
+<a id="__codelineno-7-12" name="__codelineno-7-12" href="#__codelineno-7-12"></a>meta-evolve workers add WORKER_ID --storage STORAGE [--capability KEY=VALUE ...]
+<a id="__codelineno-7-13" name="__codelineno-7-13" href="#__codelineno-7-13"></a>meta-evolve workers list --storage STORAGE
+<a id="__codelineno-7-14" name="__codelineno-7-14" href="#__codelineno-7-14"></a>meta-evolve workers revoke WORKER_ID --storage STORAGE
 </code></pre></div>
 <p>Each verb makes one public call:</p>
 <table>
@@ -3962,6 +4169,19 @@ durability contracts.</p>
 </table>
 <p><code>worker</code> is the second long-running exception, beside <code>ui</code>: it makes no run of
 its own, and serves one that is already listening.</p>
+<p><code>workers</code> is about the store rather than about any run in it: <code>add</code> enrols a
+worker the store will trust, <code>list</code> reports every enrolment it holds, and
+<code>revoke</code> withdraws trust. A revoke is installation-wide — it frees that
+worker's leases in every run the store carries — and <code>list</code> opens the store
+read-only, so it can be run while a dispatcher is driving.</p>
+<p>Writing commands report the state their transaction committed, including the
+generation and, for <code>add</code>, the complete capability declaration:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>shed-1 is enrolled at generation 1 with capabilities {&quot;gpu&quot;:true}
+<a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a>shed-1 is revoked at generation 2
+<a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a>leases from earlier generations are freed in every run in this store at that run&#39;s next broker transaction
+</code></pre></div>
+<p>Repeating a command reports the same state. Another operator may act before or
+after it; the report makes no claim about a separately observed earlier row.</p>
 <p>The module's side-effect-free <code>experiment()</code> factory returns
 <a class="autorefs autorefs-internal" title="Experiment
 
@@ -3987,17 +4207,40 @@ remain omitted so equivalent deterministic runs produce byte-identical output.</
 <p>A distributed run executes inline by default. There are two ways to select
 worker processes.</p>
 <p>The dispatcher can spawn its own:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>uv<span class="w"> </span>run<span class="w"> </span>meta-evolve<span class="w"> </span>run<span class="w"> </span>examples/operations/command_line/best_of_n.py<span class="w"> </span><span class="se">\</span>
-<a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a><span class="w">  </span>--storage<span class="w"> </span>./store<span class="w"> </span>--mode<span class="w"> </span>distributed<span class="w"> </span>--workers<span class="w"> </span><span class="m">4</span>
-</code></pre></div>
-<p>Or it can listen, and an operator starts workers wherever there is capacity:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>uv<span class="w"> </span>run<span class="w"> </span>meta-evolve<span class="w"> </span>run<span class="w"> </span>examples/operations/command_line/best_of_n.py<span class="w"> </span><span class="se">\</span>
-<a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a><span class="w">  </span>--storage<span class="w"> </span>./store<span class="w"> </span>--mode<span class="w"> </span>distributed<span class="w"> </span>--listen<span class="w"> </span><span class="m">127</span>.0.0.1:9000<span class="w"> </span><span class="se">\</span>
-<a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a><span class="w">  </span>--key-file<span class="w"> </span>./worker.key
-<a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a>
-<a id="__codelineno-9-5" name="__codelineno-9-5" href="#__codelineno-9-5"></a>uv<span class="w"> </span>run<span class="w"> </span>meta-evolve<span class="w"> </span>worker<span class="w"> </span>--module<span class="w"> </span>examples/operations/command_line/best_of_n.py<span class="w"> </span><span class="se">\</span>
-<a id="__codelineno-9-6" name="__codelineno-9-6" href="#__codelineno-9-6"></a><span class="w">  </span>--connect<span class="w"> </span><span class="m">127</span>.0.0.1:9000<span class="w"> </span>--key-file<span class="w"> </span>./worker.key<span class="w"> </span>--worker-id<span class="w"> </span>shed-1
+<a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a><span class="w">  </span>--storage<span class="w"> </span>./store<span class="w"> </span>--mode<span class="w"> </span>distributed<span class="w"> </span>--workers<span class="w"> </span><span class="m">4</span>
 </code></pre></div>
+<p>Or it can listen, and an operator starts workers wherever there is capacity.
+Enrol each worker id in the store first: a listening dispatcher admits the
+workers this store's operator put on its allow-list, and holding the key file is
+not authority to claim work.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>uv<span class="w"> </span>run<span class="w"> </span>meta-evolve<span class="w"> </span>workers<span class="w"> </span>add<span class="w"> </span>shed-1<span class="w"> </span>--storage<span class="w"> </span>./store
+<a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a>
+<a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a>uv<span class="w"> </span>run<span class="w"> </span>meta-evolve<span class="w"> </span>run<span class="w"> </span>examples/operations/command_line/best_of_n.py<span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-10-4" name="__codelineno-10-4" href="#__codelineno-10-4"></a><span class="w">  </span>--storage<span class="w"> </span>./store<span class="w"> </span>--mode<span class="w"> </span>distributed<span class="w"> </span>--listen<span class="w"> </span><span class="m">127</span>.0.0.1:9000<span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-10-5" name="__codelineno-10-5" href="#__codelineno-10-5"></a><span class="w">  </span>--key-file<span class="w"> </span>./worker.key
+<a id="__codelineno-10-6" name="__codelineno-10-6" href="#__codelineno-10-6"></a>
+<a id="__codelineno-10-7" name="__codelineno-10-7" href="#__codelineno-10-7"></a>uv<span class="w"> </span>run<span class="w"> </span>meta-evolve<span class="w"> </span>worker<span class="w"> </span>--module<span class="w"> </span>examples/operations/command_line/best_of_n.py<span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-10-8" name="__codelineno-10-8" href="#__codelineno-10-8"></a><span class="w">  </span>--connect<span class="w"> </span><span class="m">127</span>.0.0.1:9000<span class="w"> </span>--key-file<span class="w"> </span>./worker.key<span class="w"> </span>--worker-id<span class="w"> </span>shed-1
+</code></pre></div>
+<p><code>workers add</code> may run before the store exists, so enrolling is not something to
+fit into the gap between starting a dispatcher and starting its workers. A
+worker nobody enrolled is refused at the handshake, told which command would
+fix it, and exits; the run it tried to join keeps every item ready and every
+attempt unspent.</p>
+<p><code>--capability KEY=VALUE</code> declares what the worker can do, once per key. <code>VALUE</code>
+is read as JSON when it is JSON (<code>true</code>, <code>16</code>, <code>null</code>, <code>["x86_64","arm64"]</code>,
+<code>{"kind":"gpu"}</code>) and as text otherwise (<code>arm64</code>). Values nested too deeply to
+parse or record produce a usage error before storage opens. Every worker a listening
+dispatcher admits runs every item, so a worker is admitted only if its
+declaration satisfies the <code>work_requirements</code> of every component in the run,
+compared as recorded values, so <code>1</code> does not satisfy <code>true</code>. A worker that
+misses one is refused at the handshake and exits, again at no cost to the run.
+The refusal names the key and the value the run requires, and, when the worker
+declares that key at a different value, the value it declares too. A run whose components require one key at
+two values cannot be served by any worker, so it refuses to listen at all.
+Running <code>add</code> again may add capabilities; to drop one or change a value, revoke
+the worker and add it again.</p>
 <p>What each option means:</p>
 <ul>
 <li><strong><code>--workers N</code></strong> spawns <code>N</code> children of this dispatcher. They exit with it:
@@ -4007,7 +4250,12 @@ worker processes.</p>
 <li><strong><code>--listen ADDR --key-file PATH</code></strong> opens a port instead. The key file is
   created private (<code>0600</code>) if it is absent and REUSED if it is present, so
   restarting a dispatcher does not lock out the workers that hold it. A run
-  that is listening WAITS when no worker is connected rather than failing.</li>
+  that is listening WAITS when no worker is connected rather than failing. It
+  needs storage that can hold an allow-list, so <code>--storage</code> and
+  <code>--mode distributed</code> are what make it possible at all. Workers spawned with
+  <code>--workers N</code> are the dispatcher's own and need no enrolment: their ids are in
+  the reserved <code>worker-</code> namespace, and the way to stop them is to stop the
+  dispatcher.</li>
 <li><strong><code>--lease-seconds S</code></strong> is how long a work lease lasts, at least 10. A
   worker's call is renewed while it runs; if a lease is lost anyway, that
   attempt is retried and at most one completion is ever accepted.</li>
@@ -4017,14 +4265,30 @@ worker processes.</p>
   first one's place, including when both handshakes overlap.</li>
 </ul>
 <p>Both ends authenticate with the key file before anything about the run
-crosses the connection, and a worker is admitted only if it runs the same
-build and resolves the same components the run recorded. The key
+crosses the connection, and a worker is admitted only if it is enrolled, runs
+the same build, and resolves the same components the run recorded. The key
 authenticates; it does not encrypt. <strong>Multi-host use is documented and
 untested: it needs TLS, which Meta-Evolve does not provide.</strong> Keep the
 address on a loopback or a trusted network.</p>
+<p>Trust can be withdrawn while a run is live:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a>uv<span class="w"> </span>run<span class="w"> </span>meta-evolve<span class="w"> </span>workers<span class="w"> </span>list<span class="w"> </span>--storage<span class="w"> </span>./store
+<a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a>uv<span class="w"> </span>run<span class="w"> </span>meta-evolve<span class="w"> </span>workers<span class="w"> </span>revoke<span class="w"> </span>shed-1<span class="w"> </span>--storage<span class="w"> </span>./store
+</code></pre></div>
+<p>A revoke belongs to the STORE, not to the run you were watching, so it reaches
+every run in that store at once. Whatever the revoked worker is holding is freed
+at that run's next broker transaction, with the withdrawal recorded as the
+attempt's cause, and another enrolled worker runs the item under the same trial
+-- the attempt the revoked worker started stays spent, because it did start it.
+The worker itself is told which refusal it met and exits rather than reconnecting
+into it, so nothing is left running against a store that has stopped trusting it.</p>
+<p><code>workers list</code> reports trusted and revoked rows alike: a revoke moves the
+generation on and marks the row rather than deleting it, and enrolling the same
+id again restores trust at the generation the revoke reached. The listing opens
+the store read-only, so it never migrates one and can be read while a dispatcher
+is driving.</p>
 <p>Resuming is the same command with the same flags:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>uv<span class="w"> </span>run<span class="w"> </span>meta-evolve<span class="w"> </span>resume<span class="w"> </span>RUN_ID<span class="w"> </span>--module<span class="w"> </span>examples/operations/command_line/best_of_n.py<span class="w"> </span><span class="se">\</span>
-<a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a><span class="w">  </span>--storage<span class="w"> </span>./store<span class="w"> </span>--workers<span class="w"> </span><span class="m">4</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a>uv<span class="w"> </span>run<span class="w"> </span>meta-evolve<span class="w"> </span>resume<span class="w"> </span>RUN_ID<span class="w"> </span>--module<span class="w"> </span>examples/operations/command_line/best_of_n.py<span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a><span class="w">  </span>--storage<span class="w"> </span>./store<span class="w"> </span>--workers<span class="w"> </span><span class="m">4</span>
 </code></pre></div>
 <p>A dispatcher that died mid-run leaves its work claimable again. An external
 worker retains a completed result even if its first write fails, reconnects,
@@ -4033,11 +4297,19 @@ acknowledgment; an expired or superseded attempt receives a stale answer.
 If the listening address now serves a different run while the worker holds an
 unanswered result, the worker exits with a refusal naming both runs. It never
 submits one run's result to another.</p>
+<p>A distributed run resumed in a changed environment — after a <code>uv sync</code>, say —
+is not refused. <code>resume</code> prints one line before the summary, <code>environment
+changed since start: recorded ..., current ...</code>, naming the two fingerprints
+and not the input that moved: the recorded value is one digest over the
+interpreter, platform, installed distributions and Meta-Evolve's own source, so
+it cannot say which. Every worker is still admitted only if it runs the
+resuming dispatcher's build. A resume that fails prints only its error; from
+Python, <code>Run.environment_drift()</code> answers the same question.</p>
 <h2 id="read-only-local-browser">Read-only local browser<a class="headerlink" href="#read-only-local-browser" title="Permanent link">&para;</a></h2>
 <p><code>ui</code> is the one long-running lifecycle exception to the five deterministic
 report verbs. Install it explicitly and serve an existing durable store:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a>uv<span class="w"> </span>sync<span class="w"> </span>--extra<span class="w"> </span>browser
-<a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a>meta-evolve<span class="w"> </span>ui<span class="w"> </span>--storage<span class="w"> </span>./store<span class="w"> </span>--port<span class="w"> </span><span class="m">8000</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a>uv<span class="w"> </span>sync<span class="w"> </span>--extra<span class="w"> </span>browser
+<a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a>meta-evolve<span class="w"> </span>ui<span class="w"> </span>--storage<span class="w"> </span>./store<span class="w"> </span>--port<span class="w"> </span><span class="m">8000</span>
 </code></pre></div>
 <p>The host is fixed to <code>127.0.0.1</code>, the worker count is fixed to one, and valid
 ports are <code>1..65535</code>. There is no host or worker override. The command owns no
@@ -4164,7 +4436,7 @@ custom codecs remain actionable <code>422</code> capability states.</p>
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["content.action.edit", "content.action.view", "content.code.annotate", "content.code.copy", "content.tabs.link", "navigation.footer", "navigation.indexes", "navigation.instant", "navigation.instant.progress", "navigation.path", "navigation.top", "navigation.tracking", "search.highlight", "search.share", "search.suggest", "toc.follow"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["content.action.edit", "content.action.view", "content.code.annotate", "content.code.copy", "content.tabs.link", "navigation.footer", "navigation.indexes", "navigation.instant", "navigation.instant.progress", "navigation.path", "navigation.tabs", "navigation.top", "navigation.tracking", "search.highlight", "search.share", "search.suggest", "toc.follow"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
       <script src="../../assets/javascripts/bundle.d7400e89.min.js"></script>

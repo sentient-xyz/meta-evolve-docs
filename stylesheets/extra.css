@@ -1,109 +1,27 @@
 /* A quiet reading surface; Material still owns navigation and interaction. */
-:root,
-[data-md-color-scheme="default"] {
-  --md-default-bg-color: #faf9f6;
-  --md-default-fg-color: #272b2a;
-  --md-default-fg-color--light: #616763;
-  --md-default-fg-color--lighter: #858b86;
-  --md-default-fg-color--lightest: #e4e5df;
-  --md-primary-fg-color: #faf9f6;
-  --md-primary-fg-color--light: #ffffff;
-  --md-primary-fg-color--dark: #efefea;
-  --md-primary-bg-color: #272b2a;
-  --md-primary-bg-color--light: #616763;
-  --md-accent-fg-color: #286b62;
-  --md-accent-fg-color--transparent: #286b6210;
-  --md-typeset-a-color: #286b62;
-  --md-code-bg-color: #f0f1ec;
-  --md-code-fg-color: #303b38;
-  --md-code-hl-color: #286b621a;
-  --md-footer-bg-color: #faf9f6;
-  --md-footer-bg-color--dark: #f0f1ec;
-  --md-footer-fg-color: #272b2a;
-  --md-footer-fg-color--light: #616763;
-  --md-footer-fg-color--lighter: #616763;
-  --me-border: #dddfd8;
-  --me-surface: #f5f5f0;
-  --me-radius: 0.3rem;
-}
-
-[data-md-color-scheme="slate"] {
-  --md-default-bg-color: #191d1c;
-  --md-default-fg-color: #e4e7e2;
-  --md-default-fg-color--light: #adb5ae;
-  --md-default-fg-color--lighter: #89948c;
-  --md-default-fg-color--lightest: #353e38;
-  --md-primary-fg-color: #191d1c;
-  --md-primary-fg-color--light: #222825;
-  --md-primary-fg-color--dark: #141816;
-  --md-primary-bg-color: #e4e7e2;
-  --md-primary-bg-color--light: #adb5ae;
-  --md-accent-fg-color: #89bfb2;
-  --md-accent-fg-color--transparent: #89bfb214;
-  --md-typeset-a-color: #89bfb2;
-  --md-code-bg-color: #212724;
-  --md-code-fg-color: #d3ded6;
-  --md-code-hl-color: #89bfb21a;
-  --md-footer-bg-color: #191d1c;
-  --md-footer-bg-color--dark: #161a18;
-  --md-footer-fg-color: #e4e7e2;
-  --md-footer-fg-color--light: #adb5ae;
-  --md-footer-fg-color--lighter: #adb5ae;
-  --me-border: #353e38;
-  --me-surface: #202522;
-}
-
 body { font-kerning: normal; }
 .md-grid { max-width: 72rem; }
 .md-content__inner { max-width: 40rem; margin-inline: auto; padding-inline: 1.4rem; }
 
-.md-header {
-  background: var(--md-default-bg-color);
-  color: var(--md-default-fg-color);
-  border-bottom: 1px solid var(--me-border);
-  box-shadow: none;
-}
-
-.md-header__title { font-weight: 600; letter-spacing: -0.025em; }
-/* A light wash connects the header to the reading surface without an overlay. */
-.md-main {
-  background: linear-gradient(to bottom, var(--md-accent-fg-color--transparent), transparent 5rem);
-}
-.md-header .md-logo svg { width: 1.5rem; height: 1.5rem; color: var(--md-accent-fg-color); }
-.md-search__form { background: var(--me-surface); border: 1px solid var(--me-border); }
-.md-tabs { background: var(--md-default-bg-color); color: var(--md-default-fg-color); }
-.md-nav { font-size: 0.75rem; line-height: 1.5; }
-.md-nav__title { font-weight: 600; }
-.md-nav__link { color: var(--md-default-fg-color--light); }
-.md-nav--primary > .md-nav__list > .md-nav__item > .md-nav__link {
-  color: var(--md-default-fg-color);
-  font-weight: 600;
-}
-.md-nav__link:hover { color: var(--md-typeset-a-color); }
-.md-nav--primary .md-nav__item--active > .md-nav__link,
-.md-nav--secondary .md-nav__link--active {
-  color: var(--md-typeset-a-color);
-  font-weight: 600;
-}
-
-.md-typeset { font-size: 0.85rem; line-height: 1.75; }
+.md-typeset { font-size: 0.825rem; line-height: 1.75; }
 .md-typeset h1,
 .md-typeset h2,
 .md-typeset h3,
 .md-typeset h4 {
-  color: var(--md-default-fg-color);
-  font-weight: 600;
-  letter-spacing: -0.025em;
-  line-height: 1.3;
+  color: var(--me-heading);
+  font-weight: 500;
+  letter-spacing: -0.02em;
+  line-height: 1.2;
 }
 
-.md-typeset h1 { font-size: 2.1rem; margin: 0 0 1em; }
-.md-typeset h2 { font-size: 1.35rem; margin: 2.2em 0 0.8em; }
-.md-typeset h3 { font-size: 1.05rem; margin: 1.8em 0 0.6em; }
+.md-typeset h1 { font-size: 2.2rem; letter-spacing: -0.025em; margin: 0 0 0.9em; }
+.md-typeset h2 { font-size: 1.4rem; margin: 2.2em 0 0.8em; }
+.md-typeset h3 { font-size: 0.95rem; font-weight: 600; margin: 1.8em 0 0.6em; }
 .md-typeset hr { border-color: var(--me-border); }
 .md-typeset a { text-underline-offset: 0.2em; text-decoration-thickness: 1px; }
 .md-typeset p a,
-.md-typeset li a { text-decoration: underline; text-decoration-color: var(--me-border); }
+.md-typeset li a,
+.md-typeset td a { text-decoration: underline; text-decoration-color: var(--me-link-line); }
 .md-typeset a:hover { text-decoration-color: currentColor; }
 .md-typeset a:focus-visible,
 .md-typeset button:focus-visible {
@@ -112,8 +30,9 @@ body { font-kerning: normal; }
 }
 
 /* Inline code stays compact; block padding reserves room for the copy button. */
-.md-typeset code { border-radius: 0.15rem; padding: 0.12em 0.3em; }
-.md-typeset pre { line-height: 1.6; }
+.md-typeset code { border-radius: 0.25rem; padding: 0.12em 0.3em; }
+.md-typeset :not(pre) > code { background: var(--me-inline-code); }
+.md-typeset pre { line-height: 1.7; }
 .md-typeset pre > code,
 .md-typeset .highlight > pre > code {
   padding: 0.95em 2.8em 0.95em 1.2em;
@@ -157,6 +76,7 @@ body { font-kerning: normal; }
 
 .md-typeset .highlighttable .linenos { padding-block: 0.95em; }
 .md-typeset .highlight + .highlight { margin-top: 0.5rem; }
+.md-typeset .highlight :is(.c, .c1, .ch, .cm, .cs) { font-style: italic; }
 .md-code__button { color: var(--md-default-fg-color--light); }
 
 /* Generated API signatures remain readable without sideways scrolling. */
@@ -176,43 +96,60 @@ body { font-kerning: normal; }
 .md-typeset table:not([class]) {
   background: transparent;
   border: 1px solid var(--me-border);
-  border-radius: var(--me-radius);
+  border-radius: 0.6rem;
   box-shadow: none;
   font-size: 0.75rem;
 }
 
-.md-typeset table:not([class]) th { background: var(--me-surface); font-weight: 600; }
+.md-typeset table:not([class]) th { background: var(--me-surface); color: var(--me-heading); font-weight: 600; }
 .md-typeset table:not([class]) td { border-color: var(--me-border); }
-.md-typeset .admonition,
-.md-typeset details {
-  background: var(--me-surface);
-  border-radius: var(--me-radius);
-  border-width: 0 0 0 2px;
+
+/* Callouts and collapsible snippets share one frame; icons keep their meaning. */
+.md-typeset :is(.admonition, details) {
+  background: var(--md-default-bg-color);
+  border: 1px solid var(--me-border);
+  border-radius: 0.6rem;
   box-shadow: none;
   font-size: 0.8rem;
 }
 
+.md-typeset :is(.admonition, details) > :is(.admonition-title, summary) {
+  background: var(--me-surface);
+  border-bottom: 1px solid var(--me-border);
+  color: var(--md-default-fg-color);
+  font-weight: 600;
+}
+
+.md-typeset :is(.admonition, details)[class] { border-color: var(--me-border); }
+.md-typeset details:not([open]) > summary { border-bottom: 0; }
+.md-typeset :is(.note, .abstract, .info, .tip, .example, .quote, .question)
+  > :is(.admonition-title, summary)::before { background-color: var(--md-typeset-a-color); }
+.md-typeset :is(.note, .abstract, .info, .tip, .example, .quote, .question) > summary::after {
+  color: var(--md-default-fg-color--light);
+}
+
 .md-typeset .md-button {
   border: 1px solid var(--me-border);
-  border-radius: var(--me-radius);
+  border-radius: 999px;
   color: var(--md-default-fg-color);
   font-size: 0.75rem;
   font-weight: 600;
-  padding: 0.65em 1.1em;
+  padding: 0.6em 1.2em;
   text-decoration: none;
 }
 
 .md-typeset .md-button--primary {
-  background: var(--md-default-fg-color);
-  border-color: var(--md-default-fg-color);
-  color: var(--md-default-bg-color);
+  background: var(--me-button-bg);
+  border-color: var(--me-button-bg);
+  color: var(--me-button-fg);
 }
 
 .md-typeset .md-button:hover,
 .md-typeset .md-button:focus-visible {
-  background: var(--md-accent-fg-color);
-  border-color: var(--md-accent-fg-color);
-  color: var(--md-default-bg-color);
+  background: var(--me-button-bg);
+  border-color: var(--me-button-bg);
+  color: var(--me-button-fg);
+  opacity: 0.9;
 }
 
 .md-typeset .grid.cards > ol > li,
@@ -235,9 +172,6 @@ body { font-kerning: normal; }
 .md-typeset .grid > .card:focus-within { border-color: var(--me-border); box-shadow: none; }
 .md-typeset .grid.cards hr { display: none; }
 .md-typeset .grid.cards .twemoji { color: var(--md-default-fg-color--light); }
-.md-footer { border-top: 1px solid var(--me-border); }
-.md-footer__title { font-size: 0.85rem; }
-.md-top { background: var(--md-default-bg-color); border: 1px solid var(--me-border); box-shadow: none; }
 
 @media (max-width: 44.99em) {
   .md-content__inner { margin-inline: 0; padding-inline: 1rem; }

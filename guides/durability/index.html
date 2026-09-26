@@ -48,16 +48,22 @@
         
         
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Figtree:300,300i,400,400i,700,700i%7CIBM+Plex+Mono:400,400i,700,700i&display=fallback">
-        <style>:root{--md-text-font:"Figtree";--md-code-font:"IBM Plex Mono"}</style>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Hanken+Grotesk:300,300i,400,400i,700,700i%7CIBM+Plex+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Hanken Grotesk";--md-code-font:"IBM Plex Mono"}</style>
       
     
     
       <link rel="stylesheet" href="../../assets/_mkdocstrings.css">
     
+      <link rel="stylesheet" href="../../stylesheets/tokens.css">
+    
       <link rel="stylesheet" href="../../stylesheets/extra.css">
     
+      <link rel="stylesheet" href="../../stylesheets/chrome.css">
+    
       <link rel="stylesheet" href="../../stylesheets/home.css">
+    
+      <link rel="stylesheet" href="../../stylesheets/loop.css">
     
     <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
@@ -67,6 +73,8 @@
     
   
   <meta name="color-scheme" content="light dark">
+  
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,300..700;1,400..700&display=fallback">
 
   </head>
   
@@ -99,13 +107,12 @@
     
       
 
-  
-
-<header class="md-header md-header--shadow" data-md-component="header">
+<header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
     <a href="../.." title="Meta-Evolve" class="md-header__button md-logo" aria-label="Meta-Evolve" data-md-component="logo">
       
-  <img src="../../assets/logo.svg" alt="logo">
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 3.5 21 19.5H3z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M12 10 15.4 16H8.6z" fill="#b8975a"/></svg>
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -239,6 +246,149 @@
       
         
           
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../.." class="md-tabs__link">
+          
+  
+  
+    
+  
+  Start
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Guides
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../examples/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Examples
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../concepts/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Concepts
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../../reference/components/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Reference
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../project/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Development
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
         
       
       <main class="md-main" data-md-component="main">
@@ -252,12 +402,15 @@
                     
 
 
+  
 
-<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
     <a href="../.." title="Meta-Evolve" class="md-nav__button md-logo" aria-label="Meta-Evolve" data-md-component="logo">
       
-  <img src="../../assets/logo.svg" alt="logo">
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 3.5 21 19.5H3z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M12 10 15.4 16H8.6z" fill="#b8975a"/></svg>
 
     </a>
     Meta-Evolve
@@ -294,6 +447,9 @@
       
     
     
+    
+      
+      
     
     
     <li class="md-nav__item md-nav__item--nested">
@@ -409,6 +565,9 @@
       
     
     
+    
+      
+      
     
     
     <li class="md-nav__item md-nav__item--nested">
@@ -668,6 +827,9 @@
     
     
     
+      
+      
+    
     
     <li class="md-nav__item md-nav__item--nested">
       
@@ -784,6 +946,9 @@
       
     
     
+    
+      
+      
     
     
     <li class="md-nav__item md-nav__item--nested">
@@ -915,6 +1080,9 @@
     
     
     
+      
+      
+    
     
     <li class="md-nav__item md-nav__item--nested">
       
@@ -1003,6 +1171,9 @@
       
     
     
+    
+      
+      
     
     
     <li class="md-nav__item md-nav__item--nested">
@@ -1239,6 +1410,9 @@
     
     
     
+      
+      
+    
     
     <li class="md-nav__item md-nav__item--nested">
       
@@ -1449,6 +1623,9 @@
       
     
     
+    
+      
+      
     
     
     <li class="md-nav__item md-nav__item--nested">
@@ -1711,6 +1888,9 @@
     
     
     
+      
+      
+    
     
     <li class="md-nav__item md-nav__item--nested">
       
@@ -1908,6 +2088,9 @@
       
     
     
+    
+      
+      
     
     
     <li class="md-nav__item md-nav__item--nested">
@@ -2167,6 +2350,9 @@
     
     
     
+      
+      
+    
     
     <li class="md-nav__item md-nav__item--nested">
       
@@ -2285,6 +2471,9 @@
       
     
     
+    
+      
+      
     
     
     <li class="md-nav__item md-nav__item--nested">
@@ -2452,15 +2641,21 @@
     
     
     
+      
+        
+        
+      
+      
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
         
         
         <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" checked>
         
           
-          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
             
   
   
@@ -2680,6 +2875,9 @@
       
     
     
+    
+      
+      
     
     
     <li class="md-nav__item md-nav__item--active md-nav__item--nested">
@@ -3014,6 +3212,9 @@
     
     
     
+      
+      
+    
     
     <li class="md-nav__item md-nav__item--nested">
       
@@ -3181,6 +3382,9 @@
       
     
     
+    
+      
+      
     
     
     <li class="md-nav__item md-nav__item--nested">
@@ -3850,15 +4054,43 @@ user callbacks; recovery may repeat external work whose outcome never committed.
 batches fail explicitly rather than falling back to a partial interpretation.</p>
 <p><a id="upgrading-to-m11"></a></p>
 <h2 id="open-a-store-from-an-earlier-version">Open a store from an earlier version<a class="headerlink" href="#open-a-store-from-an-earlier-version" title="Permanent link">&para;</a></h2>
-<p>The current durable store schema adds the work and lease tables that
-distributed mode uses. No recorded event byte changes, and the upgrade is
-one-way: an earlier release refuses a migrated store as a future schema. A store
-an older release migrated from v1 has its <code>events</code> table rebuilt with the same
-rows, and one holding an event with no digest is refused as corrupt.
-A store written by an earlier release must be opened once with writable
+<p>The current durable store schema is 5. Schema 4 added the work and lease tables
+that distributed mode uses; schema 5 adds one more table, <code>trusted_workers</code>,
+which holds the worker identities an operator enrolled with <code>meta-evolve workers
+add</code> and is created empty. No recorded
+event byte changes at either step, and the upgrade is one-way: an earlier
+release refuses a migrated store as a future schema. A store an older release
+migrated from v1 has its <code>events</code> table rebuilt with the same rows, and one
+holding an event with no digest is refused as corrupt.</p>
+<p>A schema-4 store still opens with <code>Storage.read_only(...)</code> and in the run
+browser: a reader validates it against the schema-4 shape and changes nothing.
+Its first writable <code>Storage.durable(...)</code> open migrates it to 5 and adds the
+table. A store written before schema 4 must be opened once with writable
 <code>Storage.durable(...)</code>, which migrates it; until then <code>Storage.read_only(...)</code>
 and the run browser refuse it with
 <a class="autorefs autorefs-internal" href="../../reference/api/#meta_evolve.SchemaVersionRejected"><code>SchemaVersionRejected</code></a>.</p>
+<p>Schema 5 also puts two triggers on the <code>work_items</code> table. They call a SQL
+function that Meta-Evolve registers on every writable connection it opens, so a
+connection that has not registered it cannot insert or update that table --
+including the <code>sqlite3</code> shell and any other external tool. Reads are unaffected.
+This is deliberate. A store's schema version is checked when it is opened, so a
+dispatcher that opened the store before an in-place upgrade would otherwise keep
+leasing work under the rules of the build it started with, unaware of anything
+the upgrade decided. The triggers stop its next work write instead, as a
+<a class="autorefs autorefs-internal" href="../../reference/api/#meta_evolve.DurableStoreError"><code>DurableStoreError</code></a>, and the run continues
+under the new build. Both triggers are part of the validated schema: a schema-5
+store missing one is <a class="autorefs autorefs-internal" href="../../reference/api/#meta_evolve.DurableCorruption"><code>DurableCorruption</code></a> rather
+than something an open quietly repairs.</p>
+<p>A <code>trusted_workers</code> row that cannot be read is
+<a class="autorefs autorefs-internal" href="../../reference/api/#meta_evolve.DurableCorruption"><code>DurableCorruption</code></a>, never a row Meta-Evolve
+skips. While the worker it names holds a lease in a run, that run's next work
+write meets it -- whichever worker asked -- so the run stops until the row is
+repaired. Anything that looks the worker up by name meets it too: its own
+claims, <code>meta-evolve workers list</code>, which reports the refusal instead of a
+listing, and the door of any listening run the worker connects to, which stops
+that run, whether or not the worker holds anything in it. A run in the same
+store that the worker neither holds a lease in nor connects to keeps writing.
+Repair or replace the row -- a lease's authority cannot be read past.</p>
 <p>A <code>durable-local</code> run that uses <code>BestOfN</code> and was recorded by an earlier release
 does not resume. Its <code>RunStarted</code> manifest records a digest of the policy's
 module source. The current release changes that module, and resume compares the
@@ -3997,7 +4229,7 @@ collapsing the two would have ended such an item on its first flaky read.</p>
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["content.action.edit", "content.action.view", "content.code.annotate", "content.code.copy", "content.tabs.link", "navigation.footer", "navigation.indexes", "navigation.instant", "navigation.instant.progress", "navigation.path", "navigation.top", "navigation.tracking", "search.highlight", "search.share", "search.suggest", "toc.follow"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["content.action.edit", "content.action.view", "content.code.annotate", "content.code.copy", "content.tabs.link", "navigation.footer", "navigation.indexes", "navigation.instant", "navigation.instant.progress", "navigation.path", "navigation.tabs", "navigation.top", "navigation.tracking", "search.highlight", "search.share", "search.suggest", "toc.follow"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
       <script src="../../assets/javascripts/bundle.d7400e89.min.js"></script>

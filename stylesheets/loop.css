@@ -1,0 +1,75 @@
+/* The improvement loop as five boxes; the return bracket spans Search through Record. */
+.md-typeset .me-loop {
+  --me-loop-gap: 1.2rem;
+  border: 1px solid var(--me-border);
+  font-family: var(--md-code-font-family);
+  font-size: 0.64rem;
+  margin: 1.5em 0;
+  padding: 1.4rem;
+}
+.md-typeset .me-loop ol {
+  display: grid;
+  gap: var(--me-loop-gap);
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.md-typeset .me-loop li {
+  border: 1px solid var(--me-heading);
+  color: var(--md-default-fg-color--light);
+  line-height: 1.45;
+  margin: 0;
+  padding: 0.6rem;
+  position: relative;
+}
+.md-typeset .me-loop li strong { color: var(--me-heading); display: block; font-weight: 500; }
+.md-typeset .me-loop li + li::before {
+  color: var(--md-default-fg-color--light);
+  content: "→";
+  left: calc(-0.5 * var(--me-loop-gap));
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* With five equal columns, node centres fall at 10%, 30%, ... of the row, less the gaps. */
+.md-typeset .me-loop__return {
+  border: solid var(--md-default-fg-color--light);
+  border-width: 0 1px 1px;
+  color: var(--md-default-fg-color--light);
+  margin: 0 0 0 calc(30% - 0.2 * var(--me-loop-gap));
+  padding: 1rem 0 0.4rem;
+  position: relative;
+  text-align: center;
+  width: calc(60% + 0.6 * var(--me-loop-gap));
+}
+.md-typeset .me-loop__return::before {
+  content: "▲";
+  font-size: 0.5rem;
+  left: 0;
+  line-height: 1;
+  position: absolute;
+  top: -0.1rem;
+  transform: translateX(-50%);
+}
+.md-typeset .me-loop__notes {
+  border-top: 1px solid var(--me-border);
+  color: var(--md-default-fg-color--light);
+  margin: 1.2rem 0 0;
+  padding-top: 0.9rem;
+}
+.md-typeset .me-loop__notes p { margin: 0.2rem 0; }
+.md-typeset .me-loop__notes strong { color: var(--md-default-fg-color); font-weight: 500; }
+
+/* On phones the steps stack, and the return becomes a plain line. */
+@media (max-width: 44.99em) {
+  .md-typeset .me-loop ol { grid-template-columns: 1fr; }
+  .md-typeset .me-loop li + li::before {
+    content: "↓";
+    left: 50%;
+    top: calc(-0.5 * var(--me-loop-gap));
+  }
+  .md-typeset .me-loop__return { border: 0; margin: 0.8rem 0 0; width: auto; }
+  .md-typeset .me-loop__return::before { content: "↺ "; font-size: inherit; position: static; transform: none; }
+}

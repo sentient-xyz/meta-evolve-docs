@@ -1,0 +1,100 @@
+/* The frame: a faded navy header, one gilt hairline, and quiet sidebars. */
+.md-header,
+.md-tabs {
+  background: var(--md-primary-fg-color);
+  color: var(--md-primary-bg-color);
+}
+
+.md-header,
+.md-header--shadow { box-shadow: none; }
+.md-header__title { font-weight: 600; letter-spacing: -0.015em; }
+.md-header__button.md-logo svg { height: 1.15rem; width: 1.15rem; }
+
+/* The hairline sits under whichever bar ends the frame: the tabs, or the header on narrow screens. */
+.md-header,
+.md-tabs { border-style: solid; border-width: 0; border-image: var(--me-gilt) 1; }
+@media screen and (max-width: 76.1875em) {
+  .md-header { border-bottom-width: 1px; }
+}
+@media screen and (min-width: 76.25em) {
+  .md-tabs { border-bottom-width: 1px; }
+}
+
+.md-tabs__item { height: 2.2rem; }
+.md-tabs__link {
+  color: var(--md-primary-bg-color--light);
+  font-size: 0.72rem;
+  margin-top: 0.7rem;
+  opacity: 1;
+}
+
+.md-tabs__item--active .md-tabs__link {
+  color: var(--md-primary-bg-color);
+  font-weight: 600;
+  text-decoration: underline 2px var(--me-gold);
+  text-underline-offset: 0.55rem;
+}
+
+.md-tabs__link:hover { color: var(--md-primary-bg-color); }
+
+@media screen and (min-width: 60em) {
+  .md-search__form {
+    background: var(--me-field-bg);
+    border: 1px solid var(--me-field-border);
+    border-radius: 0.4rem;
+  }
+  .md-search__form:hover { background: var(--me-field-bg); }
+  .md-search__input,
+  .md-search__input::placeholder,
+  .md-search__icon { color: var(--md-default-fg-color--light); }
+  .md-search__input { color: var(--md-default-fg-color); }
+}
+
+/* Dark mode lets a faint warm-to-cool wash rise behind the top of each page. */
+.md-main {
+  background-image: var(--me-wash);
+  background-repeat: no-repeat;
+  background-size: 100% 17rem;
+}
+/* Sticky sidebar headings would otherwise cut solid boxes out of that wash. */
+@media screen and (min-width: 76.25em) {
+  [data-md-color-scheme="slate"] .md-nav--lifted > .md-nav__list > .md-nav__item--active > .md-nav__link,
+  [data-md-color-scheme="slate"] .md-nav--secondary .md-nav__title { background: transparent; box-shadow: none; }
+}
+
+.md-nav { font-size: 0.7rem; line-height: 1.5; }
+.md-nav__title { font-weight: 600; }
+.md-nav__link { color: var(--md-default-fg-color--light); }
+.md-nav--primary > .md-nav__list > .md-nav__item > .md-nav__link {
+  color: var(--md-default-fg-color);
+  font-weight: 600;
+}
+.md-nav__link:hover { color: var(--md-typeset-a-color); }
+
+/* The current page and section carry a short gold rule. */
+.md-nav--primary .md-nav__item--active > .md-nav__link,
+.md-nav--secondary .md-nav__link--active,
+.md-nav__link--active {
+  color: var(--me-heading);
+  font-weight: 600;
+}
+.md-nav__link--active { position: relative; }
+.md-nav__link--active::before {
+  background: var(--me-gold);
+  bottom: 0.2em;
+  content: "";
+  left: -0.5rem;
+  position: absolute;
+  top: 0.2em;
+  width: 2px;
+}
+
+.md-footer { border-top: 1px solid var(--me-border); }
+.md-footer__title { font-size: 0.85rem; }
+.md-footer-meta { border-style: solid; border-width: 1px 0 0; border-image: var(--me-gilt) 1; }
+.md-top {
+  background: var(--md-default-bg-color);
+  border: 1px solid var(--me-border);
+  box-shadow: none;
+  color: var(--md-default-fg-color);
+}
